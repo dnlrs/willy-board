@@ -1,6 +1,7 @@
 linenoise/linenoise.o: \
  C:/msys32/home/manue/esp/esp-idf/components/console/linenoise/linenoise.c \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/newlib.h \
@@ -29,6 +30,7 @@ linenoise/linenoise.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/ctype.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/fcntl.h \
@@ -36,6 +38,8 @@ linenoise/linenoise.o: \
  C:/msys32/home/manue/esp/esp-idf/components/console/linenoise/linenoise.h
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -92,6 +96,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/ctype.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 

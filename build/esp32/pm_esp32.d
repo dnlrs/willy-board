@@ -42,6 +42,7 @@ pm_esp32.o: C:/msys32/home/manue/esp/esp-idf/components/esp32/pm_esp32.c \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_clk.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -58,7 +59,6 @@ pm_esp32.o: C:/msys32/home/manue/esp/esp-idf/components/esp32/pm_esp32.c \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -79,15 +79,19 @@ pm_esp32.o: C:/msys32/home/manue/esp/esp-idf/components/esp32/pm_esp32.c \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/task.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h \
+ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/list.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/simcall.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/core-macros.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/pm_impl.h \
@@ -180,6 +184,8 @@ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_clk.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
@@ -211,8 +217,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
@@ -254,7 +258,11 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -266,11 +274,15 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_api
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/list.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/simcall.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h:
 

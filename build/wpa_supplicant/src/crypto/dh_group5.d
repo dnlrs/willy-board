@@ -35,9 +35,11 @@ src/crypto/dh_group5.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/dh_groups.h \
- C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/dh_group5.h
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/dh_group5.h \
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/includes.h:
 
@@ -109,9 +111,13 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/dh_groups.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/dh_group5.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h:
 /home/manue/esp/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.c:

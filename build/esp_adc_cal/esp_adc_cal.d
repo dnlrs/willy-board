@@ -39,7 +39,9 @@ esp_adc_cal.o: \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h
@@ -122,7 +124,11 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
 

@@ -1,58 +1,43 @@
-/*
- * WiFi.h
- */
+#pragma once
 
-#ifndef _WIFI_HANDLER
-#define _WIFI_HANDLER
 
-#include <cstdlib>
-#include <cstdio>
-#include "sdkconfig.h"
-#include <stdio.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
-#include "esp_event.h"
 #include "esp_event_loop.h"
-#include "time.h"
-#include "freertos/event_groups.h"
 #include "esp_system.h"
-#include "esp_log.h"
 #include "nvs_flash.h"
-#include <string.h>
-#include "lwip/sockets.h"
-#include <errno.h>
 #include <string>
+#include <string.h>
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+
+using namespace std;
 
 class WiFi {
-	std::string         ssid;
-	std::string         passphrase;
-	wifi_country_t      wifi_country;
-	wifi_init_config_t  init_cfg; //configuration for initialization
-	wifi_config_t       sec_cfg; //configuration for connection
+	mutex m;
+	condition_variable connected_flag; //other threads subscribe to this cv 
+									   //in order to know when wifi is started successfully
 
 	WiFi();
 public:
 
-	WiFi(const std::string& ssid,const std::string& passphrase);
+	WiFi(const string& ssid,const string& passphrase);
 	~WiFi();
 
-
-	void setPassphrase(const std::string& passphrase) {
-		this->passphrase = passphrase;
+	void wait_connection(){
+		unique_lock<mutex> ul(m);
+		connected_flag.wait(ul);
 	}
 
-	void setSSID(const std::string& ssid) {
-		this->ssid = ssid;
+	void signal_connection(){
+		unique_lock<mutex> ul(m);
+		connected_flag.notify_all();
 	}
 
-	void init();
 	void connect();
 	void disconnect();
-
+	static esp_err_t event_handler(void *ctx, system_event_t *event);
 };
 
-
-
-#endif /* _WIFI_HANDLER */
+extern WiFi *wifi_handler; //extern global handler for wifi

@@ -41,6 +41,7 @@ commands.o: \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/console/linenoise/linenoise.h \
  C:/msys32/home/manue/esp/esp-idf/components/console/argtable3/argtable3.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h
@@ -126,6 +127,8 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
 C:/msys32/home/manue/esp/esp-idf/components/console/linenoise/linenoise.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/console/argtable3/argtable3.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 

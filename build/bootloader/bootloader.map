@@ -6,6 +6,8 @@ C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o) (bootloader_utility_load_partition_table)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o) (bootloader_init)
+C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o) (bootloader_read_flash_id)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o) (bootloader_mmap)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
@@ -21,13 +23,15 @@ C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o) (bootloader_sha256_start)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
-                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o) (esp_log_timestamp)
+                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o) (esp_log_early_timestamp)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o) (esp_rom_spiflash_unlock)
+                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o) (esp_rom_spiflash_wait_idle)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o) (rtc_clk_slow_freq_get)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o) (rtc_clk_cal_ratio)
+C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+                              C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o) (GPIO_PIN_MUX_REG)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o) (rtc_vddsdio_get_config)
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
@@ -37,20 +41,13 @@ c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_b
 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
                               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o) (__udivdi3)
 
-Allocating common symbols
-Common symbol       size              file
-
-esp_image_spi_freq_t
-                    0x4               C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-
 Discarded input sections
 
  .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .xt.lit        0x00000000       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- .xt.prop       0x00000000       0xe4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- COMMON         0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+ .xt.prop       0x00000000       0xb4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
@@ -60,7 +57,48 @@ Discarded input sections
  .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
  .xt.lit        0x00000000       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .xt.prop       0x00000000      0x594 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .xt.prop       0x00000000      0x5e8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .literal.write_status_8b_wrsr2
+                0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.read_status_8b_rdsr2
+                0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.write_status_16b_wrsr
+                0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.read_status_16b_rdsr_rdsr2
+                0x00000000        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.write_status_8b_wrsr
+                0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.read_status_8b_rdsr
+                0x00000000        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.enable_qio_mode
+                0x00000000       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .literal.bootloader_enable_qio_mode
+                0x00000000       0x2c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.write_status_8b_wrsr2
+                0x00000000       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.read_status_8b_rdsr2
+                0x00000000       0x15 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.write_status_16b_wrsr
+                0x00000000       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.read_status_16b_rdsr_rdsr2
+                0x00000000       0x29 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.write_status_8b_wrsr
+                0x00000000       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.read_status_8b_rdsr
+                0x00000000       0x15 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .rodata.str1.4
+                0x00000000       0xdb C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.enable_qio_mode
+                0x00000000       0x84 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.bootloader_enable_qio_mode
+                0x00000000       0xf4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .rodata.chip_data
+                0x00000000       0x5a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .xt.lit        0x00000000       0x50 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .xt.prop       0x00000000      0x2a0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
  .literal.bootloader_flash_write
                 0x00000000       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_erase_sector
@@ -99,11 +137,25 @@ Discarded input sections
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
  .xt.lit        0x00000000        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
  .xt.prop       0x00000000       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .literal.bootloader_common_check_long_hold_gpio
+                0x00000000       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_label_search
+                0x00000000       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_erase_part_type_data
+                0x00000000       0x60 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
  .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
  .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .xt.lit        0x00000000       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .xt.prop       0x00000000       0x90 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_check_long_hold_gpio
+                0x00000000       0xac C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .rodata.str1.4
+                0x00000000      0x112 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_label_search
+                0x00000000       0xac C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_erase_part_type_data
+                0x00000000      0x126 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .xt.lit        0x00000000       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .xt.prop       0x00000000      0x2ac C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
  .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
  .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
  .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
@@ -217,7 +269,7 @@ Discarded input sections
  .text.rtc_clk_apll_enable
                 0x00000000      0x15a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .text.rtc_clk_slow_freq_get_hz
-                0x00000000       0x27 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x00000000       0x29 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_from_mhz
                 0x00000000       0x4c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_to_xtal
@@ -227,7 +279,7 @@ Discarded input sections
  .text.rtc_clk_cpu_freq_set_fast
                 0x00000000       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .xt.lit        0x00000000       0xd8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .xt.prop       0x00000000      0xb94 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .xt.prop       0x00000000      0xbac C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cal
                 0x00000000        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
  .literal.rtc_time_us_to_slowclk
@@ -246,7 +298,13 @@ Discarded input sections
  .text.rtc_time_get
                 0x00000000       0x50 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
  .xt.lit        0x00000000       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .xt.prop       0x00000000      0x258 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .xt.prop       0x00000000      0x24c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .data          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .bss           0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .rodata.GPIO_PIN_MUX_REG
+                0x00000000       0xa0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .xt.prop       0x00000000        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
  .literal.rtc_init
                 0x00000000       0xb8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
  .text          0x00000000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
@@ -274,7 +332,8 @@ Memory Configuration
 
 Name             Origin             Length             Attributes
 dport0_seg       0x3ff00000         0x00000010         rw
-iram_seg         0x40078000         0x00008000         xrw
+iram_loader_seg  0x40078000         0x00008000         xrw
+iram_seg         0x40080400         0x0000fc00         xrw
 dram_seg         0x3fff0000         0x00010000         rw
 *default*        0x00000000         0xffffffff
 
@@ -292,11 +351,660 @@ LOAD c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 LOAD c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcov.a
 END GROUP
 
-.iram1.text     0x40078000        0x0
+.iram_loader.text
+                0x40078000     0x1e04
                 0x40078000                . = ALIGN (0x10)
+                0x40078000                _stext = .
+                0x40078000                _text_start = ABSOLUTE (.)
+ *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
+ *(.iram1 .iram1.*)
+ .iram1.literal
+                0x40078000       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x5c (size before relaxing)
+ .iram1.literal
+                0x40078040       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+                                 0x30 (size before relaxing)
+ .literal.esp_log_early_timestamp
+                0x4007805c        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .literal       0x40078064        0x8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .literal.log_invalid_app_partition
+                0x4007806c       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x2c (size before relaxing)
+ .literal.try_load_partition
+                0x40078084        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x14 (size before relaxing)
+ .literal.set_cache_and_start_app
+                0x40078088       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x30 (size before relaxing)
+ .literal.unpack_load_app
+                0x400780ac       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x34 (size before relaxing)
+ .literal.load_image
+                0x400780c8        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x18 (size before relaxing)
+ .literal.bootloader_utility_load_partition_table
+                0x400780cc       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x84 (size before relaxing)
+ .literal.bootloader_utility_get_selected_boot_partition
+                0x40078110       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x70 (size before relaxing)
+ .literal.bootloader_utility_load_boot_image
+                0x4007812c       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x5c (size before relaxing)
+ .literal.should_map
+                0x4007813c        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x10 (size before relaxing)
+ .literal.verify_image_header
+                0x4007813c       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x2c (size before relaxing)
+ .literal.verify_segment_header
+                0x40078150        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x28 (size before relaxing)
+ .literal.verify_checksum
+                0x4007815c        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x1c (size before relaxing)
+ .literal.process_segment_data
+                0x40078160        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x24 (size before relaxing)
+ .literal.verify_simple_hash
+                0x40078168        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x2c (size before relaxing)
+ .literal.should_load
+                0x40078170       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x18 (size before relaxing)
+ .literal.process_segment
+                0x40078180       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x60 (size before relaxing)
+ .literal.esp_image_load
+                0x400781a0       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x7c (size before relaxing)
+ .literal.bootloader_fill_random
+                0x400781b4        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .literal.bootloader_random_enable
+                0x400781bc       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                                 0x78 (size before relaxing)
+ .literal.bootloader_random_disable
+                0x4007822c       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                                 0x4c (size before relaxing)
+ .literal.spi_to_esp_err
+                0x40078248        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .literal.bootloader_flash_read_allow_decrypt
+                0x40078250       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x30 (size before relaxing)
+ .literal.bootloader_flash_read_no_decrypt
+                0x40078260        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x14 (size before relaxing)
+ .literal.bootloader_mmap
+                0x40078260       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x50 (size before relaxing)
+ .literal.bootloader_munmap
+                0x40078274        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x14 (size before relaxing)
+ .literal.bootloader_flash_read
+                0x40078278        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x30 (size before relaxing)
+ .literal.esp_partition_table_basic_verify
+                0x40078284       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+                                 0x5c (size before relaxing)
+ .literal.bootloader_sha256_start
+                0x400782b4        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .literal.bootloader_sha256_data
+                0x400782bc       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                                 0x30 (size before relaxing)
+ .literal.bootloader_sha256_finish
+                0x400782dc       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                                 0x4c (size before relaxing)
+ .iram1         0x400782f4      0x22b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ *fill*         0x4007851f        0x1 
+ .iram1         0x40078520      0x11a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+                0x40078520                esp_cpu_stall
+                0x400785b4                esp_cpu_unstall
+                0x40078608                esp_cpu_reset
+                0x4007862c                esp_cpu_in_ocd_debug_mode
+ *fill*         0x4007863a        0x0 
+ *liblog.a:(.literal .text .literal.* .text.*)
+ *fill*         0x4007863a        0x2 
+ .text.esp_log_early_timestamp
+                0x4007863c       0x1f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+                0x4007863c                esp_log_early_timestamp
+                0x4007863c                esp_log_timestamp
+ *fill*         0x4007865b        0x0 
+ *libgcc.a:(.literal .text .literal.* .text.*)
+ *fill*         0x4007865b        0x1 
+ .text          0x4007865c       0x26 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+                0x4007865c                __bswapsi2
+ *fill*         0x40078682        0x0 
+ *fill*         0x40078682        0x2 
+ .text          0x40078684      0x281 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+                0x40078684                __udivdi3
+ *libbootloader_support.a:bootloader_utility.o(.literal .text .literal.* .text.*)
+ *fill*         0x40078905        0x3 
+ .text.log_invalid_app_partition
+                0x40078908       0x57 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x5b (size before relaxing)
+ *fill*         0x4007895f        0x1 
+ .text.try_load_partition
+                0x40078960       0x34 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x38 (size before relaxing)
+ .text.set_cache_and_start_app
+                0x40078994       0xce C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x40078a62        0x2 
+ .text.unpack_load_app
+                0x40078a64       0xb0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0xb4 (size before relaxing)
+ .text.load_image
+                0x40078b14       0x1e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0x26 (size before relaxing)
+ *fill*         0x40078b32        0x2 
+ .text.bootloader_utility_load_partition_table
+                0x40078b34      0x160 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                0x17c (size before relaxing)
+                0x40078b34                bootloader_utility_load_partition_table
+ .text.bootloader_utility_get_selected_boot_partition
+                0x40078c94      0x140 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                0x14c (size before relaxing)
+                0x40078c94                bootloader_utility_get_selected_boot_partition
+ .text.bootloader_utility_load_boot_image
+                0x40078dd4       0xd7 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                 0xf7 (size before relaxing)
+                0x40078dd4                bootloader_utility_load_boot_image
+ *fill*         0x40078eab        0x1 
+ .text.index_to_partition
+                0x40078eac       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x40078ef4        0x0 
+ *fill*         0x40078ef4        0x0 
+ *fill*         0x40078ef4        0x0 
+ *libbootloader_support.a:esp_image_format.o(.literal .text .literal.* .text.*)
+ .text.should_map
+                0x40078ef4       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .text.verify_image_header
+                0x40078f24       0x7e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ *fill*         0x40078fa2        0x2 
+ .text.verify_segment_header
+                0x40078fa4       0x71 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x79 (size before relaxing)
+ *fill*         0x40079015        0x3 
+ .text.verify_checksum
+                0x40079018       0x87 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x8f (size before relaxing)
+ *fill*         0x4007909f        0x1 
+ .text.process_segment_data
+                0x400790a0       0xa4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0xb0 (size before relaxing)
+ .text.verify_simple_hash
+                0x40079144       0x5b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x6a (size before relaxing)
+ *fill*         0x4007919f        0x1 
+ .text.should_load
+                0x400791a0       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                 0x48 (size before relaxing)
+ .text.process_segment
+                0x400791e4      0x13a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                0x146 (size before relaxing)
+ *fill*         0x4007931e        0x2 
+ .text.esp_image_load
+                0x40079320      0x256 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                0x272 (size before relaxing)
+                0x40079320                esp_image_load
+ *fill*         0x40079576        0x0 
+ *fill*         0x40079576        0x0 
+ *fill*         0x40079576        0x0 
+ *fill*         0x40079576        0x0 
+ *fill*         0x40079576        0x0 
+ *fill*         0x40079576        0x0 
+ *libbootloader_support.a:bootloader_random.o(.literal .text .literal.* .text.*)
+ *fill*         0x40079576        0x2 
+ .text.bootloader_fill_random
+                0x40079578       0x59 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                0x40079578                bootloader_fill_random
+ *fill*         0x400795d1        0x3 
+ .text.bootloader_random_enable
+                0x400795d4      0x1d5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                0x400795d4                bootloader_random_enable
+ *fill*         0x400797a9        0x3 
+ .text.bootloader_random_disable
+                0x400797ac      0x11c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                0x400797ac                bootloader_random_disable
+ *fill*         0x400798c8        0x0 
+ *fill*         0x400798c8        0x0 
+ *fill*         0x400798c8        0x0 
+ *libbootloader_support.a:bootloader_flash.o(.literal .text .literal.* .text.*)
+ .text.spi_to_esp_err
+                0x400798c8       0x22 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x400798ea        0x2 
+ .text.bootloader_flash_read_allow_decrypt
+                0x400798ec       0x97 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x9b (size before relaxing)
+ *fill*         0x40079983        0x1 
+ .text.bootloader_flash_read_no_decrypt
+                0x40079984       0x32 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0x36 (size before relaxing)
+ *fill*         0x400799b6        0x2 
+ .text.bootloader_mmap
+                0x400799b8       0xb1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                                 0xb9 (size before relaxing)
+                0x400799b8                bootloader_mmap
+ *fill*         0x40079a69        0x3 
+ .text.bootloader_munmap
+                0x40079a6c       0x36 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                0x40079a6c                bootloader_munmap
+ *fill*         0x40079aa2        0x2 
+ .text.bootloader_flash_read
+                0x40079aa4       0x86 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                0x40079aa4                bootloader_flash_read
+ *fill*         0x40079b2a        0x0 
+ *fill*         0x40079b2a        0x0 
+ *fill*         0x40079b2a        0x0 
+ *fill*         0x40079b2a        0x0 
+ *fill*         0x40079b2a        0x0 
+ *libbootloader_support.a:flash_partitions.o(.literal .text .literal.* .text.*)
+ *fill*         0x40079b2a        0x2 
+ .text.esp_partition_table_basic_verify
+                0x40079b2c      0x143 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+                                0x14f (size before relaxing)
+                0x40079b2c                esp_partition_table_basic_verify
+ *fill*         0x40079c6f        0x0 
+ *libbootloader_support.a:bootloader_sha.o(.literal .text .literal.* .text.*)
+ *fill*         0x40079c6f        0x1 
+ .text.bootloader_sha256_start
+                0x40079c70       0x12 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                0x40079c70                bootloader_sha256_start
+ *fill*         0x40079c82        0x2 
+ .text.bootloader_sha256_data
+                0x40079c84       0xa1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                                 0xa9 (size before relaxing)
+                0x40079c84                bootloader_sha256_data
+ *fill*         0x40079d25        0x3 
+ .text.bootloader_sha256_finish
+                0x40079d28       0xdc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                                 0xf0 (size before relaxing)
+                0x40079d28                bootloader_sha256_finish
+ *fill*         0x40079e04        0x0 
+ *fill*         0x40079e04        0x0 
+ *fill*         0x40079e04        0x0 
+ *(.fini.literal)
+ *(.fini)
+ *(.gnu.version)
+                0x40079e04                _text_end = ABSOLUTE (.)
+                0x40079e04                _etext = .
+
+.iram.text      0x40080400     0x1cde
+                0x40080400                . = ALIGN (0x10)
  *(.entry.text)
  *(.init.literal)
  *(.init)
+                0x40080400                _stext = .
+                0x40080400                _text_start = ABSOLUTE (.)
+ *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
+ .literal.selected_boot_partition
+                0x40080400        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                  0x4 (size before relaxing)
+ .literal.select_partition_number
+                0x40080400        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                 0x18 (size before relaxing)
+ .literal.call_start_cpu0
+                0x4008040c        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                 0x10 (size before relaxing)
+ .literal.wdt_reset_cpu0_info_enable
+                0x40080410        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .literal.wdt_reset_info_dump
+                0x40080414       0x5c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x6c (size before relaxing)
+ .literal.print_flash_info
+                0x40080470       0x4c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x68 (size before relaxing)
+ .literal.vddsdio_configure
+                0x400804bc        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                  0xc (size before relaxing)
+ .literal.uart_console_configure
+                0x400804c0       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x18 (size before relaxing)
+ .literal.wdt_reset_check
+                0x400804d4        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x30 (size before relaxing)
+ .literal.update_flash_config
+                0x400804e0       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .literal.bootloader_main
+                0x40080500       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x7c (size before relaxing)
+ .literal.__assert_func
+                0x40080524        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x10 (size before relaxing)
+ .literal.bootloader_init
+                0x40080528       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x74 (size before relaxing)
+ .literal.execute_flash_command
+                0x40080570       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+                                 0x3c (size before relaxing)
+ .literal.bootloader_read_flash_id
+                0x400805a8        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+                                  0x8 (size before relaxing)
+ .literal.bootloader_clock_configure
+                0x400805ac       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+                                 0x20 (size before relaxing)
+ .literal.bootloader_common_ota_select_crc
+                0x400805bc        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_ota_select_valid
+                0x400805c0        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+                                  0x4 (size before relaxing)
+ .literal.esp_rom_spiflash_read_status
+                0x400805c0       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x14 (size before relaxing)
+ .literal.esp_rom_spiflash_wait_idle
+                0x400805d0        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                  0xc (size before relaxing)
+ .literal.esp_rom_spiflash_read_data
+                0x400805d8        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x18 (size before relaxing)
+ .literal.esp_rom_spiflash_read_statushigh
+                0x400805e4        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                  0xc (size before relaxing)
+ .literal.esp_rom_spiflash_write_status
+                0x400805e8        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x14 (size before relaxing)
+ .literal.esp_rom_spiflash_unlock
+                0x400805ec        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x28 (size before relaxing)
+ .literal.esp_rom_spiflash_read
+                0x400805f8       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x5c (size before relaxing)
+ .literal.rtc_clk_32k_enable_internal
+                0x40080630       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_32k_enable
+                0x40080644        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0xc (size before relaxing)
+ .literal.rtc_clk_8m_enable
+                0x40080648        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x10 (size before relaxing)
+ .literal.rtc_clk_8m_enabled
+                0x40080654        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x4 (size before relaxing)
+ .literal.rtc_clk_8md256_enabled
+                0x40080654        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x4 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_estimate
+                0x40080654       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x4c (size before relaxing)
+ .literal.rtc_clk_slow_freq_set
+                0x40080674        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0xc (size before relaxing)
+ .literal.rtc_clk_slow_freq_get
+                0x40080678        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x4 (size before relaxing)
+ .literal.rtc_clk_fast_freq_set
+                0x40080678        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0xc (size before relaxing)
+ .literal.rtc_clk_fast_freq_get
+                0x40080678        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x4 (size before relaxing)
+ .literal.rtc_clk_bbpll_set
+                0x40080678       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x38 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_get
+                0x40080688        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x1c (size before relaxing)
+ .literal.rtc_clk_cpu_freq_get
+                0x40080690       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x28 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_value
+                0x400806a4       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x2c (size before relaxing)
+ .literal.rtc_clk_xtal_freq_update
+                0x400806c4        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x8 (size before relaxing)
+ .literal.rtc_clk_apb_freq_update
+                0x400806c4        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                  0x8 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_set
+                0x400806c8       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x78 (size before relaxing)
+ .literal.rtc_clk_apb_freq_get
+                0x400806e4        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x14 (size before relaxing)
+ .literal.rtc_clk_init
+                0x400806ec       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x94 (size before relaxing)
+ .literal.rtc_clk_cal_internal
+                0x40080710       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                                 0x3c (size before relaxing)
+ .literal.rtc_clk_cal_ratio
+                0x40080734        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                                  0x8 (size before relaxing)
+ .literal.rtc_clk_wait_for_slow_cycle
+                0x40080734        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                                 0x20 (size before relaxing)
+ .literal.rtc_vddsdio_get_config
+                0x4008073c       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                                 0x30 (size before relaxing)
+ .literal.rtc_vddsdio_set_config
+                0x40080760        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                                  0x8 (size before relaxing)
+ .text.selected_boot_partition
+                0x40080760        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                 0x10 (size before relaxing)
+ .text.select_partition_number
+                0x4008076c       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                 0x34 (size before relaxing)
+ .text.call_start_cpu0
+                0x4008079c       0x2a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                 0x32 (size before relaxing)
+                0x4008079c                call_start_cpu0
+ *fill*         0x400807c6        0x2 
+ .text.wdt_reset_cpu0_info_enable
+                0x400807c8       0x27 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ *fill*         0x400807ef        0x1 
+ .text.wdt_reset_info_dump
+                0x400807f0       0xe6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ *fill*         0x400808d6        0x2 
+ .text.print_flash_info
+                0x400808d8       0xf6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ *fill*         0x400809ce        0x2 
+ .text.vddsdio_configure
+                0x400809d0       0x33 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x37 (size before relaxing)
+ *fill*         0x40080a03        0x1 
+ .text.uart_console_configure
+                0x40080a04       0x36 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x3a (size before relaxing)
+ *fill*         0x40080a3a        0x2 
+ .text.wdt_reset_check
+                0x40080a3c       0xa2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0xae (size before relaxing)
+ *fill*         0x40080ade        0x2 
+ .text.update_flash_config
+                0x40080ae0       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .text.bootloader_main
+                0x40080b48       0xbc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0xe8 (size before relaxing)
+ .text.__assert_func
+                0x40080c04       0x1f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                 0x23 (size before relaxing)
+                0x40080c04                __assert_func
+ *fill*         0x40080c23        0x1 
+ .text.bootloader_init
+                0x40080c24      0x12a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                0x136 (size before relaxing)
+                0x40080c24                bootloader_init
+ *fill*         0x40080d4e        0x2 
+ .text.execute_flash_command
+                0x40080d50      0x190 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .text.bootloader_read_flash_id
+                0x40080ee0       0x27 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+                                 0x2b (size before relaxing)
+                0x40080ee0                bootloader_read_flash_id
+ *fill*         0x40080f07        0x1 
+ .text.bootloader_clock_configure
+                0x40080f08       0x6e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+                                 0x76 (size before relaxing)
+                0x40080f08                bootloader_clock_configure
+ *fill*         0x40080f76        0x2 
+ .text.bootloader_common_ota_select_crc
+                0x40080f78       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+                0x40080f78                bootloader_common_ota_select_crc
+ .text.bootloader_common_ota_select_valid
+                0x40080f8c       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+                                 0x24 (size before relaxing)
+                0x40080f8c                bootloader_common_ota_select_valid
+ .text.esp_rom_spiflash_read_status
+                0x40080fac       0x61 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                0x40080fac                esp_rom_spiflash_read_status
+ *fill*         0x4008100d        0x3 
+ .text.esp_rom_spiflash_wait_idle
+                0x40081010       0x32 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                0x40081010                esp_rom_spiflash_wait_idle
+ *fill*         0x40081042        0x2 
+ .text.esp_rom_spiflash_read_data
+                0x40081044       0xe2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x40081126        0x2 
+ .text.esp_rom_spiflash_read_statushigh
+                0x40081128       0x21 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                0x40081128                esp_rom_spiflash_read_statushigh
+ *fill*         0x40081149        0x3 
+ .text.esp_rom_spiflash_write_status
+                0x4008114c       0x34 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x38 (size before relaxing)
+                0x4008114c                esp_rom_spiflash_write_status
+ .text.esp_rom_spiflash_unlock
+                0x40081180       0x6a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                                 0x7e (size before relaxing)
+                0x40081180                esp_rom_spiflash_unlock
+ *fill*         0x400811ea        0x2 
+ .text.esp_rom_spiflash_read
+                0x400811ec      0x284 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                0x400811ec                esp_rom_spiflash_read
+ .text.rtc_clk_32k_enable_internal
+                0x40081470       0x81 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ *fill*         0x400814f1        0x3 
+ .text.rtc_clk_32k_enable
+                0x400814f4       0x2d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400814f4                rtc_clk_32k_enable
+ *fill*         0x40081521        0x3 
+ .text.rtc_clk_8m_enable
+                0x40081524       0x9d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x40081524                rtc_clk_8m_enable
+ *fill*         0x400815c1        0x3 
+ .text.rtc_clk_8m_enabled
+                0x400815c4       0x19 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400815c4                rtc_clk_8m_enabled
+ *fill*         0x400815dd        0x3 
+ .text.rtc_clk_8md256_enabled
+                0x400815e0       0x1a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400815e0                rtc_clk_8md256_enabled
+ *fill*         0x400815fa        0x2 
+ .text.rtc_clk_xtal_freq_estimate
+                0x400815fc       0xa6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0xb2 (size before relaxing)
+ *fill*         0x400816a2        0x2 
+ .text.rtc_clk_slow_freq_set
+                0x400816a4       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400816a4                rtc_clk_slow_freq_set
+ .text.rtc_clk_slow_freq_get
+                0x400816ec       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400816ec                rtc_clk_slow_freq_get
+ .text.rtc_clk_fast_freq_set
+                0x400816fc       0x2a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x400816fc                rtc_clk_fast_freq_set
+ *fill*         0x40081726        0x2 
+ .text.rtc_clk_fast_freq_get
+                0x40081728       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x40081728                rtc_clk_fast_freq_get
+ .text.rtc_clk_bbpll_set
+                0x40081738      0x170 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                0x178 (size before relaxing)
+                0x40081738                rtc_clk_bbpll_set
+ .text.rtc_clk_xtal_freq_get
+                0x400818a8       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x3c (size before relaxing)
+                0x400818a8                rtc_clk_xtal_freq_get
+                0x400818a8                rtc_get_xtal
+ .text.rtc_clk_cpu_freq_get
+                0x400818e0       0x88 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x94 (size before relaxing)
+                0x400818e0                rtc_clk_cpu_freq_get
+ .text.rtc_clk_cpu_freq_value
+                0x40081968       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x48 (size before relaxing)
+                0x40081968                rtc_clk_cpu_freq_value
+ .text.rtc_clk_xtal_freq_update
+                0x400819ac       0x12 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x16 (size before relaxing)
+                0x400819ac                rtc_clk_xtal_freq_update
+ *fill*         0x400819be        0x2 
+ .text.rtc_clk_apb_freq_update
+                0x400819c0       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                 0x16 (size before relaxing)
+                0x400819c0                rtc_clk_apb_freq_update
+ *fill*         0x400819d3        0x1 
+ .text.rtc_clk_cpu_freq_set
+                0x400819d4      0x1bc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                0x1d0 (size before relaxing)
+                0x400819d4                rtc_clk_cpu_freq_set
+ .text.rtc_clk_apb_freq_get
+                0x40081b90       0x2a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x40081b90                rtc_clk_apb_freq_get
+ *fill*         0x40081bba        0x2 
+ .text.rtc_clk_init
+                0x40081bbc      0x182 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                0x1ba (size before relaxing)
+                0x40081bbc                rtc_clk_init
+ *fill*         0x40081d3e        0x2 
+ .text.rtc_clk_cal_internal
+                0x40081d40      0x180 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .text.rtc_clk_cal_ratio
+                0x40081ec0       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                                 0x24 (size before relaxing)
+                0x40081ec0                rtc_clk_cal_ratio
+ .text.rtc_clk_wait_for_slow_cycle
+                0x40081ee0       0x79 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                0x40081ee0                rtc_clk_wait_for_slow_cycle
+ *fill*         0x40081f59        0x3 
+ .text.rtc_vddsdio_get_config
+                0x40081f5c      0x104 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                0x40081f5c                rtc_vddsdio_get_config
+ .text.rtc_vddsdio_set_config
+                0x40082060       0x46 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                0x40082060                rtc_vddsdio_set_config
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x0 
+ *fill*         0x400820a6        0x2 
+ .text.clk_val_is_valid
+                0x400820a8       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .text.reg_val_to_clk_val
+                0x400820c8        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .text.clk_val_to_reg_val
+                0x400820d0        0xe C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *fill*         0x400820de        0x0 
+ *(.iram .iram.*)
+ *(.fini.literal)
+ *(.fini)
+ *(.gnu.version)
+                0x400820de                _text_end = ABSOLUTE (.)
+                0x400820de                _etext = .
 
 .dram0.bss      0x3fff0000       0x18
                 0x3fff0000                . = ALIGN (0x8)
@@ -344,7 +1052,7 @@ END GROUP
  *(.jcr)
                 0x3fff001c                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x3fff001c     0x1624
+.dram0.rodata   0x3fff001c     0x1678
                 0x3fff001c                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x3fff001c       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
@@ -354,735 +1062,99 @@ END GROUP
                 0x3fff0038       0x3b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  *fill*         0x3fff0073        0x1 
  .rodata.str1.4
-                0x3fff0074      0x559 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                0x561 (size before relaxing)
- *fill*         0x3fff05cd        0x3 
+                0x3fff0074      0x5a5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                0x5ad (size before relaxing)
+ *fill*         0x3fff0619        0x3 
  .rodata.str1.4
-                0x3fff05d0      0x3c6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                0x3ce (size before relaxing)
- *fill*         0x3fff0996        0x2 
- .rodata.__func__$3801
-                0x3fff0998       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                0x3fff061c      0x3ce C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                0x3d6 (size before relaxing)
+ *fill*         0x3fff09ea        0x2 
+ .rodata.__func__$4357
+                0x3fff09ec       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
  .rodata.str1.4
-                0x3fff09a8      0x28e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- *fill*         0x3fff0c36        0x2 
+                0x3fff09fc      0x28e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x3fff0c8a        0x2 
  .rodata.str1.4
-                0x3fff0c38      0x45a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                0x3fff0c8c      0x45a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
                                 0x49a (size before relaxing)
- *fill*         0x3fff1092        0x2 
+ *fill*         0x3fff10e6        0x2 
  .rodata.str1.4
-                0x3fff1094      0x163 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- *fill*         0x3fff11f7        0x1 
+                0x3fff10e8      0x163 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ *fill*         0x3fff124b        0x1 
  .rodata.str1.4
-                0x3fff11f8       0xd0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .rodata.padding$2493
-                0x3fff12c8       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .rodata.__func__$2489
-                0x3fff1308       0x19 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- *fill*         0x3fff1321        0x3 
- .rodata.__func__$2469
-                0x3fff1324       0x17 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- *fill*         0x3fff133b        0x1 
+                0x3fff124c       0xd0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .rodata.padding$3047
+                0x3fff131c       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .rodata.__func__$3043
+                0x3fff135c       0x19 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x3fff1375        0x3 
+ .rodata.__func__$3023
+                0x3fff1378       0x17 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x3fff138f        0x1 
  .rodata.str1.4
-                0x3fff133c      0x25c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x3fff1390      0x25c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
                                 0x259 (size before relaxing)
  .rodata.rtc_clk_xtal_freq_estimate
-                0x3fff1598       0x64 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x3fff15ec       0x64 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .rodata.rtc_clk_cpu_freq_value
-                0x3fff15fc       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .rodata.__func__$2697
-                0x3fff1610       0x17 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- *fill*         0x3fff1627        0x1 
- .rodata.__func__$2682
-                0x3fff1628       0x15 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x3fff1650       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .rodata.__func__$2844
+                0x3fff1664       0x17 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ *fill*         0x3fff167b        0x1 
+ .rodata.__func__$2829
+                0x3fff167c       0x15 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x3fff163d                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x3fff1691                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x3fff1640                . = ((. + 0x3) & 0xfffffffc)
- *fill*         0x3fff163d        0x3 
-                0x3fff1640                __init_array_start = ABSOLUTE (.)
+                0x3fff1694                . = ((. + 0x3) & 0xfffffffc)
+ *fill*         0x3fff1691        0x3 
+                0x3fff1694                __init_array_start = ABSOLUTE (.)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x3fff1640                __init_array_end = ABSOLUTE (.)
+                0x3fff1694                __init_array_end = ABSOLUTE (.)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x3fff1640                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x3fff1694                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x3fff1640                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x3fff1694                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x3fff1640                _rodata_end = ABSOLUTE (.)
-                0x3fff1640                _lit4_start = ABSOLUTE (.)
+                0x3fff1694                _rodata_end = ABSOLUTE (.)
+                0x3fff1694                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x3fff1640                _lit4_end = ABSOLUTE (.)
-                0x3fff1640                . = ALIGN (0x4)
-                0x3fff1640                _heap_start = ABSOLUTE (.)
-
-.iram.text      0x40078000     0x37f2
-                0x40078000                _stext = .
-                0x40078000                _text_start = ABSOLUTE (.)
- *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
- .literal.selected_boot_partition
-                0x40078000        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                  0x4 (size before relaxing)
- .literal.select_image
-                0x40078000       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                 0x20 (size before relaxing)
- .literal.call_start_cpu0
-                0x40078010        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                  0xc (size before relaxing)
- .literal.log_invalid_app_partition
-                0x40078010       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x2c (size before relaxing)
- .literal.try_load_partition
-                0x40078024        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x14 (size before relaxing)
- .literal.set_cache_and_start_app
-                0x40078028       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x30 (size before relaxing)
- .literal.unpack_load_app
-                0x4007804c       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x34 (size before relaxing)
- .literal.bootloader_utility_load_partition_table
-                0x40078068       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x84 (size before relaxing)
- .literal.bootloader_utility_get_selected_boot_partition
-                0x400780ac       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x70 (size before relaxing)
- .literal.bootloader_utility_load_boot_image
-                0x400780c8        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x3c (size before relaxing)
- .literal.bootloader_utility_load_image
-                0x400780d0        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x18 (size before relaxing)
- .literal.wdt_reset_cpu0_info_enable
-                0x400780d4        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .literal.wdt_reset_info_dump
-                0x400780d8       0x5c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x6c (size before relaxing)
- .literal.print_flash_info
-                0x40078134       0x4c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x68 (size before relaxing)
- .literal.vddsdio_configure
-                0x40078180        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                  0xc (size before relaxing)
- .literal.uart_console_configure
-                0x40078184       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x18 (size before relaxing)
- .literal.wdt_reset_check
-                0x40078198        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x30 (size before relaxing)
- .literal.update_flash_config
-                0x400781a4       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x20 (size before relaxing)
- .literal.bootloader_main
-                0x400781b4       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x74 (size before relaxing)
- .literal.__assert_func
-                0x400781d8        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x10 (size before relaxing)
- .literal.bootloader_init
-                0x400781dc       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x74 (size before relaxing)
- .literal.spi_to_esp_err
-                0x40078218        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .literal.bootloader_flash_read_allow_decrypt
-                0x40078220       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x30 (size before relaxing)
- .literal.bootloader_flash_read_no_decrypt
-                0x40078230        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x14 (size before relaxing)
- .literal.bootloader_mmap
-                0x40078230       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x50 (size before relaxing)
- .literal.bootloader_munmap
-                0x40078244        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x14 (size before relaxing)
- .literal.bootloader_flash_read
-                0x40078244        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x30 (size before relaxing)
- .literal.bootloader_fill_random
-                0x40078250        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .literal.bootloader_random_enable
-                0x40078258       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                                 0x78 (size before relaxing)
- .literal.bootloader_random_disable
-                0x400782c8       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                                 0x4c (size before relaxing)
- .literal.should_map
-                0x400782e4        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x10 (size before relaxing)
- .literal.verify_image_header
-                0x400782e4       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x2c (size before relaxing)
- .literal.verify_segment_header
-                0x400782f8        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x28 (size before relaxing)
- .literal.verify_checksum
-                0x40078304        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x1c (size before relaxing)
- .literal.process_segment_data
-                0x40078308        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x24 (size before relaxing)
- .literal.verify_simple_hash
-                0x40078310        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x2c (size before relaxing)
- .literal.should_load
-                0x40078318        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x18 (size before relaxing)
- .literal.process_segment
-                0x40078324       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x60 (size before relaxing)
- .literal.esp_image_load
-                0x40078340       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x7c (size before relaxing)
- .literal.esp_partition_table_basic_verify
-                0x40078354       0x2c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
-                                 0x5c (size before relaxing)
- .literal.bootloader_clock_configure
-                0x40078380       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
-                                 0x20 (size before relaxing)
- .literal.bootloader_common_ota_select_crc
-                0x40078390        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .literal.bootloader_common_ota_select_valid
-                0x40078394        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
-                                  0x4 (size before relaxing)
- .literal.bootloader_sha256_start
-                0x40078394        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .literal.bootloader_sha256_data
-                0x4007839c       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
-                                 0x30 (size before relaxing)
- .literal.bootloader_sha256_finish
-                0x400783bc       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
-                                 0x4c (size before relaxing)
- .literal.esp_log_early_timestamp
-                0x400783d4        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .literal.esp_rom_spiflash_read_status
-                0x400783dc       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x14 (size before relaxing)
- .literal.esp_rom_spiflash_wait_idle
-                0x400783ec        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                  0xc (size before relaxing)
- .literal.esp_rom_spiflash_read_data
-                0x400783f4       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x18 (size before relaxing)
- .literal.esp_rom_spiflash_read_statushigh
-                0x40078404        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                  0xc (size before relaxing)
- .literal.esp_rom_spiflash_write_status
-                0x40078408        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x14 (size before relaxing)
- .literal.esp_rom_spiflash_unlock
-                0x40078408        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x28 (size before relaxing)
- .literal.esp_rom_spiflash_read
-                0x40078414       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x5c (size before relaxing)
- .literal.rtc_clk_32k_enable_internal
-                0x40078450       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x14 (size before relaxing)
- .literal.rtc_clk_32k_enable
-                0x40078460        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0xc (size before relaxing)
- .literal.rtc_clk_8m_enable
-                0x40078464        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x10 (size before relaxing)
- .literal.rtc_clk_8m_enabled
-                0x40078470        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x4 (size before relaxing)
- .literal.rtc_clk_8md256_enabled
-                0x40078470        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x4 (size before relaxing)
- .literal.rtc_clk_xtal_freq_estimate
-                0x40078470       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x4c (size before relaxing)
- .literal.rtc_clk_slow_freq_set
-                0x40078490        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0xc (size before relaxing)
- .literal.rtc_clk_slow_freq_get
-                0x40078490        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x4 (size before relaxing)
- .literal.rtc_clk_fast_freq_set
-                0x40078490        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0xc (size before relaxing)
- .literal.rtc_clk_fast_freq_get
-                0x40078490        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x4 (size before relaxing)
- .literal.rtc_clk_bbpll_set
-                0x40078490       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x38 (size before relaxing)
- .literal.rtc_clk_xtal_freq_get
-                0x400784a0        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x1c (size before relaxing)
- .literal.rtc_clk_cpu_freq_get
-                0x400784a8       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x28 (size before relaxing)
- .literal.rtc_clk_cpu_freq_value
-                0x400784bc       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x2c (size before relaxing)
- .literal.rtc_clk_xtal_freq_update
-                0x400784dc        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x8 (size before relaxing)
- .literal.rtc_clk_apb_freq_update
-                0x400784dc        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                  0x8 (size before relaxing)
- .literal.rtc_clk_cpu_freq_set
-                0x400784e0       0x1c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x78 (size before relaxing)
- .literal.rtc_clk_apb_freq_get
-                0x400784fc        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x14 (size before relaxing)
- .literal.rtc_clk_init
-                0x40078504       0x24 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x94 (size before relaxing)
- .literal.rtc_clk_cal_internal
-                0x40078528       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                                 0x3c (size before relaxing)
- .literal.rtc_clk_cal_ratio
-                0x40078548        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                                  0x8 (size before relaxing)
- .literal.rtc_clk_wait_for_slow_cycle
-                0x40078548        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                                 0x20 (size before relaxing)
- .literal.rtc_vddsdio_get_config
-                0x40078550       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
-                                 0x30 (size before relaxing)
- .literal.rtc_vddsdio_set_config
-                0x40078570        0x4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
-                                  0x8 (size before relaxing)
- .literal       0x40078574        0x8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .iram1.literal
-                0x4007857c       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x60 (size before relaxing)
- .iram1.literal
-                0x400785ac       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
-                                 0x30 (size before relaxing)
- .text.selected_boot_partition
-                0x400785c0        0xc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                 0x10 (size before relaxing)
- .text.select_image
-                0x400785cc       0x52 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                 0x5a (size before relaxing)
- *fill*         0x4007861e        0x2 
- .text.call_start_cpu0
-                0x40078620       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                 0x20 (size before relaxing)
-                0x40078620                call_start_cpu0
- .text.log_invalid_app_partition
-                0x40078638       0x57 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x5b (size before relaxing)
- *fill*         0x4007868f        0x1 
- .text.try_load_partition
-                0x40078690       0x34 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x38 (size before relaxing)
- .text.set_cache_and_start_app
-                0x400786c4       0xcf C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- *fill*         0x40078793        0x1 
- .text.unpack_load_app
-                0x40078794       0xb2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0xb6 (size before relaxing)
- *fill*         0x40078846        0x2 
- .text.bootloader_utility_load_partition_table
-                0x40078848      0x15c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                0x178 (size before relaxing)
-                0x40078848                bootloader_utility_load_partition_table
- .text.bootloader_utility_get_selected_boot_partition
-                0x400789a4      0x140 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                0x14c (size before relaxing)
-                0x400789a4                bootloader_utility_get_selected_boot_partition
- .text.bootloader_utility_load_boot_image
-                0x40078ae4       0xa6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0xba (size before relaxing)
-                0x40078ae4                bootloader_utility_load_boot_image
- *fill*         0x40078b8a        0x2 
- .text.bootloader_utility_load_image
-                0x40078b8c       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                 0x28 (size before relaxing)
-                0x40078b8c                bootloader_utility_load_image
- .text.wdt_reset_cpu0_info_enable
-                0x40078bac       0x27 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- *fill*         0x40078bd3        0x1 
- .text.wdt_reset_info_dump
-                0x40078bd4       0xe6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- *fill*         0x40078cba        0x2 
- .text.print_flash_info
-                0x40078cbc       0xf6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- *fill*         0x40078db2        0x2 
- .text.vddsdio_configure
-                0x40078db4       0x33 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x37 (size before relaxing)
- *fill*         0x40078de7        0x1 
- .text.uart_console_configure
-                0x40078de8       0x36 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x3a (size before relaxing)
- *fill*         0x40078e1e        0x2 
- .text.wdt_reset_check
-                0x40078e20       0xa2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0xae (size before relaxing)
- *fill*         0x40078ec2        0x2 
- .text.update_flash_config
-                0x40078ec4       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .text.bootloader_main
-                0x40078f2c       0xb0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0xdc (size before relaxing)
- .text.__assert_func
-                0x40078fdc       0x1f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                 0x23 (size before relaxing)
-                0x40078fdc                __assert_func
- *fill*         0x40078ffb        0x1 
- .text.bootloader_init
-                0x40078ffc      0x12a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                0x136 (size before relaxing)
-                0x40078ffc                bootloader_init
- *fill*         0x40079126        0x2 
- .text.spi_to_esp_err
-                0x40079128       0x22 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- *fill*         0x4007914a        0x2 
- .text.bootloader_flash_read_allow_decrypt
-                0x4007914c       0x97 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x9b (size before relaxing)
- *fill*         0x400791e3        0x1 
- .text.bootloader_flash_read_no_decrypt
-                0x400791e4       0x32 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0x36 (size before relaxing)
- *fill*         0x40079216        0x2 
- .text.bootloader_mmap
-                0x40079218       0xb1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                                 0xb9 (size before relaxing)
-                0x40079218                bootloader_mmap
- *fill*         0x400792c9        0x3 
- .text.bootloader_munmap
-                0x400792cc       0x36 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                0x400792cc                bootloader_munmap
- *fill*         0x40079302        0x2 
- .text.bootloader_flash_read
-                0x40079304       0x86 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
-                0x40079304                bootloader_flash_read
- *fill*         0x4007938a        0x2 
- .text.bootloader_fill_random
-                0x4007938c       0x59 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                0x4007938c                bootloader_fill_random
- *fill*         0x400793e5        0x3 
- .text.bootloader_random_enable
-                0x400793e8      0x1d5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                0x400793e8                bootloader_random_enable
- *fill*         0x400795bd        0x3 
- .text.bootloader_random_disable
-                0x400795c0      0x11c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                0x400795c0                bootloader_random_disable
- .text.should_map
-                0x400796dc       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .text.verify_image_header
-                0x4007970c       0x7e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- *fill*         0x4007978a        0x2 
- .text.verify_segment_header
-                0x4007978c       0x71 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x79 (size before relaxing)
- *fill*         0x400797fd        0x3 
- .text.verify_checksum
-                0x40079800       0x87 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x8f (size before relaxing)
- *fill*         0x40079887        0x1 
- .text.process_segment_data
-                0x40079888       0xa4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0xb0 (size before relaxing)
- .text.verify_simple_hash
-                0x4007992c       0x5b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x6a (size before relaxing)
- *fill*         0x40079987        0x1 
- .text.should_load
-                0x40079988       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                 0x48 (size before relaxing)
- .text.process_segment
-                0x400799cc      0x13a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                0x146 (size before relaxing)
- *fill*         0x40079b06        0x2 
- .text.esp_image_load
-                0x40079b08      0x256 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                0x272 (size before relaxing)
-                0x40079b08                esp_image_load
- *fill*         0x40079d5e        0x2 
- .text.esp_partition_table_basic_verify
-                0x40079d60      0x143 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
-                                0x14f (size before relaxing)
-                0x40079d60                esp_partition_table_basic_verify
- *fill*         0x40079ea3        0x1 
- .text.bootloader_clock_configure
-                0x40079ea4       0x6e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
-                                 0x76 (size before relaxing)
-                0x40079ea4                bootloader_clock_configure
- *fill*         0x40079f12        0x2 
- .text.bootloader_common_ota_select_crc
-                0x40079f14       0x14 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
-                0x40079f14                bootloader_common_ota_select_crc
- .text.bootloader_common_ota_select_valid
-                0x40079f28       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
-                                 0x24 (size before relaxing)
-                0x40079f28                bootloader_common_ota_select_valid
- .text.bootloader_sha256_start
-                0x40079f48       0x12 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
-                0x40079f48                bootloader_sha256_start
- *fill*         0x40079f5a        0x2 
- .text.bootloader_sha256_data
-                0x40079f5c       0xa1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
-                                 0xa9 (size before relaxing)
-                0x40079f5c                bootloader_sha256_data
- *fill*         0x40079ffd        0x3 
- .text.bootloader_sha256_finish
-                0x4007a000       0xdc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
-                                 0xf0 (size before relaxing)
-                0x4007a000                bootloader_sha256_finish
- .text.esp_log_early_timestamp
-                0x4007a0dc       0x1f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
-                0x4007a0dc                esp_log_early_timestamp
-                0x4007a0dc                esp_log_timestamp
- *fill*         0x4007a0fb        0x1 
- .text.esp_rom_spiflash_read_status
-                0x4007a0fc       0x61 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                0x4007a0fc                esp_rom_spiflash_read_status
- *fill*         0x4007a15d        0x3 
- .text.esp_rom_spiflash_wait_idle
-                0x4007a160       0x32 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                0x4007a160                esp_rom_spiflash_wait_idle
- *fill*         0x4007a192        0x2 
- .text.esp_rom_spiflash_read_data
-                0x4007a194       0xe2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x4007a276        0x2 
- .text.esp_rom_spiflash_read_statushigh
-                0x4007a278       0x21 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                0x4007a278                esp_rom_spiflash_read_statushigh
- *fill*         0x4007a299        0x3 
- .text.esp_rom_spiflash_write_status
-                0x4007a29c       0x34 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x38 (size before relaxing)
-                0x4007a29c                esp_rom_spiflash_write_status
- .text.esp_rom_spiflash_unlock
-                0x4007a2d0       0x6a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                                 0x7e (size before relaxing)
-                0x4007a2d0                esp_rom_spiflash_unlock
- *fill*         0x4007a33a        0x2 
- .text.esp_rom_spiflash_read
-                0x4007a33c      0x284 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
-                0x4007a33c                esp_rom_spiflash_read
- .text.rtc_clk_32k_enable_internal
-                0x4007a5c0       0x81 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- *fill*         0x4007a641        0x3 
- .text.rtc_clk_32k_enable
-                0x4007a644       0x2d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a644                rtc_clk_32k_enable
- *fill*         0x4007a671        0x3 
- .text.rtc_clk_8m_enable
-                0x4007a674       0x9d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a674                rtc_clk_8m_enable
- *fill*         0x4007a711        0x3 
- .text.rtc_clk_8m_enabled
-                0x4007a714       0x19 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a714                rtc_clk_8m_enabled
- *fill*         0x4007a72d        0x3 
- .text.rtc_clk_8md256_enabled
-                0x4007a730       0x1a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a730                rtc_clk_8md256_enabled
- *fill*         0x4007a74a        0x2 
- .text.rtc_clk_xtal_freq_estimate
-                0x4007a74c       0xa6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0xb2 (size before relaxing)
- *fill*         0x4007a7f2        0x2 
- .text.rtc_clk_slow_freq_set
-                0x4007a7f4       0x27 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a7f4                rtc_clk_slow_freq_set
- *fill*         0x4007a81b        0x1 
- .text.rtc_clk_slow_freq_get
-                0x4007a81c       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a81c                rtc_clk_slow_freq_get
- .text.rtc_clk_fast_freq_set
-                0x4007a82c       0x2a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a82c                rtc_clk_fast_freq_set
- *fill*         0x4007a856        0x2 
- .text.rtc_clk_fast_freq_get
-                0x4007a858       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007a858                rtc_clk_fast_freq_get
- .text.rtc_clk_bbpll_set
-                0x4007a868      0x170 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                0x178 (size before relaxing)
-                0x4007a868                rtc_clk_bbpll_set
- .text.rtc_clk_xtal_freq_get
-                0x4007a9d8       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x3c (size before relaxing)
-                0x4007a9d8                rtc_clk_xtal_freq_get
-                0x4007a9d8                rtc_get_xtal
- .text.rtc_clk_cpu_freq_get
-                0x4007aa10       0x88 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x94 (size before relaxing)
-                0x4007aa10                rtc_clk_cpu_freq_get
- .text.rtc_clk_cpu_freq_value
-                0x4007aa98       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x48 (size before relaxing)
-                0x4007aa98                rtc_clk_cpu_freq_value
- .text.rtc_clk_xtal_freq_update
-                0x4007aadc       0x12 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x16 (size before relaxing)
-                0x4007aadc                rtc_clk_xtal_freq_update
- *fill*         0x4007aaee        0x2 
- .text.rtc_clk_apb_freq_update
-                0x4007aaf0       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                 0x16 (size before relaxing)
-                0x4007aaf0                rtc_clk_apb_freq_update
- *fill*         0x4007ab03        0x1 
- .text.rtc_clk_cpu_freq_set
-                0x4007ab04      0x1bc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                0x1d0 (size before relaxing)
-                0x4007ab04                rtc_clk_cpu_freq_set
- .text.rtc_clk_apb_freq_get
-                0x4007acc0       0x2a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                0x4007acc0                rtc_clk_apb_freq_get
- *fill*         0x4007acea        0x2 
- .text.rtc_clk_init
-                0x4007acec      0x182 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                0x1ba (size before relaxing)
-                0x4007acec                rtc_clk_init
- *fill*         0x4007ae6e        0x2 
- .text.rtc_clk_cal_internal
-                0x4007ae70      0x161 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- *fill*         0x4007afd1        0x3 
- .text.rtc_clk_cal_ratio
-                0x4007afd4       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                                 0x24 (size before relaxing)
-                0x4007afd4                rtc_clk_cal_ratio
- .text.rtc_clk_wait_for_slow_cycle
-                0x4007aff4       0x79 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                0x4007aff4                rtc_clk_wait_for_slow_cycle
- *fill*         0x4007b06d        0x3 
- .text.rtc_vddsdio_get_config
-                0x4007b070      0x113 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
-                0x4007b070                rtc_vddsdio_get_config
- *fill*         0x4007b183        0x1 
- .text.rtc_vddsdio_set_config
-                0x4007b184       0x46 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
-                0x4007b184                rtc_vddsdio_set_config
- *fill*         0x4007b1ca        0x2 
- .text          0x4007b1cc       0x26 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
-                0x4007b1cc                __bswapsi2
- *fill*         0x4007b1f2        0x2 
- .text.index_to_partition
-                0x4007b1f4       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- *fill*         0x4007b23c        0x0 
- .text.clk_val_is_valid
-                0x4007b23c       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .text.reg_val_to_clk_val
-                0x4007b25c        0x8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .text.clk_val_to_reg_val
-                0x4007b264        0xe C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x0 
- *fill*         0x4007b272        0x2 
- .text          0x4007b274      0x281 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
-                0x4007b274                __udivdi3
- *(.iram1 .iram1.*)
- *fill*         0x4007b4f5        0x3 
- .iram1         0x4007b4f8      0x1df C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- *fill*         0x4007b6d7        0x1 
- .iram1         0x4007b6d8      0x11a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
-                0x4007b6d8                esp_cpu_stall
-                0x4007b76c                esp_cpu_unstall
-                0x4007b7c0                esp_cpu_reset
-                0x4007b7e4                esp_cpu_in_ocd_debug_mode
- *fill*         0x4007b7f2        0x0 
- *fill*         0x4007b7f2        0x0 
- *(.fini.literal)
- *(.fini)
- *(.gnu.version)
-                0x4007b7f2                _text_end = ABSOLUTE (.)
-                0x4007b7f2                _etext = .
+                0x3fff1694                _lit4_end = ABSOLUTE (.)
+                0x3fff1694                . = ALIGN (0x4)
+                0x3fff1694                _heap_start = ABSOLUTE (.)
                 [!provide]                PROVIDE (abort, 0x4000bba4)
-                [!provide]                PROVIDE (__absvdi2, 0x4006387c)
-                [!provide]                PROVIDE (__absvsi2, 0x40063868)
                 [!provide]                PROVIDE (Add2SelfBigHex256, 0x40015b7c)
                 [!provide]                PROVIDE (AddBigHex256, 0x40015b28)
                 [!provide]                PROVIDE (AddBigHexModP256, 0x40015c98)
-                [!provide]                PROVIDE (__adddf3, 0x40002590)
                 [!provide]                PROVIDE (AddP256, 0x40015c74)
                 [!provide]                PROVIDE (AddPdiv2_256, 0x40015ce0)
-                [!provide]                PROVIDE (__addsf3, 0x400020e8)
-                [!provide]                PROVIDE (__addvdi3, 0x40002cbc)
-                [!provide]                PROVIDE (__addvsi3, 0x40002c98)
                 [!provide]                PROVIDE (aes_128_cbc_decrypt, 0x4005cc7c)
                 [!provide]                PROVIDE (aes_128_cbc_encrypt, 0x4005cc18)
                 [!provide]                PROVIDE (aes_unwrap, 0x4005ccf0)
                 [!provide]                PROVIDE (app_gpio_arg, 0x3ffe003c)
                 [!provide]                PROVIDE (app_gpio_handler, 0x3ffe0040)
-                [!provide]                PROVIDE (__ashldi3, 0x4000c818)
-                [!provide]                PROVIDE (__ashrdi3, 0x4000c830)
                 [!provide]                PROVIDE (base64_decode, 0x4005ced8)
                 [!provide]                PROVIDE (base64_encode, 0x4005cdbc)
                 [!provide]                PROVIDE (BasePoint_x_256, 0x3ff97488)
                 [!provide]                PROVIDE (BasePoint_y_256, 0x3ff97468)
                 [!provide]                PROVIDE (bigHexInversion256, 0x400168f0)
                 [!provide]                PROVIDE (bigHexP256, 0x3ff973bc)
-                [!provide]                PROVIDE (__bswapdi2, 0x400649c4)
-                [!provide]                PROVIDE (__bswapsi2, 0x4006499c)
                 [!provide]                PROVIDE (btdm_r_ble_bt_handler_tab_p_get, 0x40019b0c)
                 [!provide]                PROVIDE (btdm_r_btdm_option_data_p_get, 0x40010004)
                 [!provide]                PROVIDE (btdm_r_btdm_rom_version_get, 0x40010078)
@@ -1102,14 +1174,8 @@ END GROUP
                 [!provide]                PROVIDE (cache_sram_mmu_set_rom, 0x400097f4)
                 [!provide]                PROVIDE (calc_rtc_memory_crc, 0x40008170)
                 [!provide]                PROVIDE (calloc, 0x4000bee4)
-                [!provide]                PROVIDE (_calloc_r, 0x4000bbf8)
                 [!provide]                PROVIDE (__clear_cache, 0x40063860)
                 [!provide]                PROVIDE (_close_r, 0x4000bd3c)
-                [!provide]                PROVIDE (__clrsbdi2, 0x40064a38)
-                [!provide]                PROVIDE (__clrsbsi2, 0x40064a20)
-                [!provide]                PROVIDE (__clzdi2, 0x4000ca50)
-                [!provide]                PROVIDE (__clzsi2, 0x4000c7e8)
-                [!provide]                PROVIDE (__cmpdi2, 0x40063820)
                 [!provide]                PROVIDE (co_default_bdaddr, 0x3ffae704)
                 [!provide]                PROVIDE (co_null_bdaddr, 0x3ffb80e0)
                 [!provide]                PROVIDE (co_sca2ppm, 0x3ff971e8)
@@ -1121,8 +1187,6 @@ END GROUP
                 [!provide]                PROVIDE (crc8_le, 0x4005d0e0)
                 [!provide]                PROVIDE (_ctype_, 0x3ff96354)
                 0x3ff96350                PROVIDE (__ctype_ptr__, 0x3ff96350)
-                [!provide]                PROVIDE (__ctzdi2, 0x4000ca64)
-                [!provide]                PROVIDE (__ctzsi2, 0x4000c7f0)
                 [!provide]                PROVIDE (_data_end_rom, 0x4000d5c8)
                 [!provide]                PROVIDE (_data_end_btdm_rom, 0x4000d4f8)
                 [!provide]                PROVIDE (_data_start_rom, 0x4000d4f8)
@@ -1155,49 +1219,21 @@ END GROUP
                 [!provide]                PROVIDE (dh_group2_prime, 0x3ff9ad22)
                 [!provide]                PROVIDE (dh_group5_generator, 0x3ff9ad21)
                 [!provide]                PROVIDE (dh_group5_prime, 0x3ff9ac61)
-                [!provide]                PROVIDE (__divdc3, 0x40064460)
-                [!provide]                PROVIDE (__divdf3, 0x40002954)
-                [!provide]                PROVIDE (__divdi3, 0x4000ca84)
-                [!provide]                PROVIDE (__divsc3, 0x40064200)
-                [!provide]                PROVIDE (__divsf3, 0x4000234c)
-                [!provide]                PROVIDE (__divsi3, 0x4000c7b8)
                 0x3ffae290                PROVIDE (g_rom_spiflash_dummy_len_plus, 0x3ffae290)
                 [!provide]                PROVIDE (ecc_env, 0x3ffb8d60)
                 [!provide]                PROVIDE (ecc_Jacobian_InfinityPoint256, 0x3ff972e8)
                 [!provide]                PROVIDE (em_buf_env, 0x3ffb8d74)
                 [!provide]                PROVIDE (environ, 0x3ffae0b4)
-                [!provide]                PROVIDE (__eqdf2, 0x400636a8)
-                [!provide]                PROVIDE (__eqsf2, 0x40063374)
                 [!provide]                PROVIDE (esp_crc8, 0x4005d144)
                 [!provide]                PROVIDE (_etext, 0x4000d66c)
                 [!provide]                PROVIDE (ets_readySet_, 0x3ffe01f0)
                 [!provide]                PROVIDE (ets_startup_callback, 0x3ffe0404)
                 [!provide]                PROVIDE (exc_cause_table, 0x3ff991d0)
                 [!provide]                PROVIDE (_exit_r, 0x4000bd28)
-                [!provide]                PROVIDE (__extendsfdf2, 0x40002c34)
-                [!provide]                PROVIDE (__ffsdi2, 0x4000ca2c)
-                [!provide]                PROVIDE (__ffssi2, 0x4000c804)
-                [!provide]                PROVIDE (__fixdfdi, 0x40002ac4)
-                [!provide]                PROVIDE (__fixdfsi, 0x40002a78)
-                [!provide]                PROVIDE (__fixsfdi, 0x4000244c)
-                [!provide]                PROVIDE (__fixsfsi, 0x4000240c)
-                [!provide]                PROVIDE (__fixunsdfsi, 0x40002b30)
-                [!provide]                PROVIDE (__fixunssfdi, 0x40002504)
-                [!provide]                PROVIDE (__fixunssfsi, 0x400024ac)
-                [!provide]                PROVIDE (__floatdidf, 0x4000c988)
-                [!provide]                PROVIDE (__floatdisf, 0x4000c8c0)
-                [!provide]                PROVIDE (__floatsidf, 0x4000c944)
-                [!provide]                PROVIDE (__floatsisf, 0x4000c870)
-                [!provide]                PROVIDE (__floatundidf, 0x4000c978)
-                [!provide]                PROVIDE (__floatundisf, 0x4000c8b0)
-                [!provide]                PROVIDE (__floatunsidf, 0x4000c938)
-                [!provide]                PROVIDE (__floatunsisf, 0x4000c864)
                 [!provide]                PROVIDE (free, 0x4000beb8)
                 [!provide]                PROVIDE (_free_r, 0x4000bbcc)
                 [!provide]                PROVIDE (_fstat_r, 0x4000bccc)
                 [!provide]                PROVIDE (__gcc_bcmp, 0x40064a70)
-                [!provide]                PROVIDE (__gedf2, 0x40063768)
-                [!provide]                PROVIDE (__gesf2, 0x4006340c)
                 [!provide]                PROVIDE (_getpid_r, 0x4000bcfc)
                 [!provide]                PROVIDE (__getreent, 0x4000be8c)
                 [!provide]                PROVIDE (_gettimeofday_r, 0x4000bc58)
@@ -1207,8 +1243,6 @@ END GROUP
                 [!provide]                PROVIDE (_global_impure_ptr, 0x3ffae0b0)
                 [!provide]                PROVIDE (g_phyFuns_instance, 0x3ffae0c4)
                 0x3ffae270                PROVIDE (g_rom_flashchip, 0x3ffae270)
-                [!provide]                PROVIDE (__gtdf2, 0x400636dc)
-                [!provide]                PROVIDE (__gtsf2, 0x400633a0)
                 [!provide]                PROVIDE (gTxMsg, 0x3ffe0050)
                 [!provide]                PROVIDE (hci_cmd_desc_root_tab, 0x3ff976d4)
                 [!provide]                PROVIDE (hci_cmd_desc_tab_ctrl_bb, 0x3ff97b70)
@@ -1221,6 +1255,7 @@ END GROUP
                 [!provide]                PROVIDE (hci_cmd_desc_tab_vs, 0x3ff97714)
                 [!provide]                PROVIDE (hci_command_handler, 0x4004c928)
                 [!provide]                PROVIDE (hci_env, 0x3ffb9350)
+                [!provide]                PROVIDE (rwip_env, 0x3ffb8bcc)
                 [!provide]                PROVIDE (hci_evt_dbg_desc_tab, 0x3ff9750c)
                 [!provide]                PROVIDE (hci_evt_desc_tab, 0x3ff9751c)
                 [!provide]                PROVIDE (hci_evt_le_desc_tab, 0x3ff974b4)
@@ -1253,8 +1288,6 @@ END GROUP
                 [!provide]                PROVIDE (ld_pcm_settings_dft, 0x3ff98a0c)
                 [!provide]                PROVIDE (ld_sched_params, 0x3ffb96c0)
                 [!provide]                PROVIDE (ld_sync_train_channels, 0x3ff98a3c)
-                [!provide]                PROVIDE (__ledf2, 0x40063704)
-                [!provide]                PROVIDE (__lesf2, 0x400633c0)
                 [!provide]                PROVIDE (_link_r, 0x4000bc9c)
                 [!provide]                PROVIDE (llc_default_handler, 0x3ff98b3c)
                 [!provide]                PROVIDE (llc_default_state_tab_p_get, 0x40046058)
@@ -1307,9 +1340,6 @@ END GROUP
                 [!provide]                PROVIDE (_lock_try_acquire, 0x4000be3c)
                 [!provide]                PROVIDE (_lock_try_acquire_recursive, 0x4000be50)
                 [!provide]                PROVIDE (_lseek_r, 0x4000bd8c)
-                [!provide]                PROVIDE (__lshrdi3, 0x4000c84c)
-                [!provide]                PROVIDE (__ltdf2, 0x40063790)
-                [!provide]                PROVIDE (__ltsf2, 0x4006342c)
                 [!provide]                PROVIDE (malloc, 0x4000bea0)
                 [!provide]                PROVIDE (_malloc_r, 0x4000bbb4)
                 [!provide]                PROVIDE (maxSecretKey_256, 0x3ff97448)
@@ -1319,43 +1349,19 @@ END GROUP
                 0x4005da9c                PROVIDE (MD5Update, 0x4005da9c)
                 [!provide]                PROVIDE (md5_vector, 0x4005db80)
                 0x400095a4                PROVIDE (mmu_init, 0x400095a4)
-                [!provide]                PROVIDE (__moddi3, 0x4000cd4c)
-                [!provide]                PROVIDE (__modsi3, 0x4000c7c0)
                 [!provide]                PROVIDE (__month_lengths, 0x3ff9609c)
-                [!provide]                PROVIDE (__muldc3, 0x40063bf4)
-                [!provide]                PROVIDE (__muldf3, 0x4006358c)
-                [!provide]                PROVIDE (__muldi3, 0x4000c9fc)
-                [!provide]                PROVIDE (__mulsc3, 0x40063934)
-                [!provide]                PROVIDE (__mulsf3, 0x400632c8)
-                [!provide]                PROVIDE (__mulsi3, 0x4000c7b0)
                 [!provide]                PROVIDE (MultiplyBigHexByUint32_256, 0x40016214)
                 [!provide]                PROVIDE (MultiplyBigHexModP256, 0x400160b8)
                 [!provide]                PROVIDE (MultiplyByU32ModP256, 0x40015fdc)
                 [!provide]                PROVIDE (multofup, 0x4000ab8c)
-                [!provide]                PROVIDE (__mulvdi3, 0x40002d78)
-                [!provide]                PROVIDE (__mulvsi3, 0x40002d60)
                 [!provide]                PROVIDE (mz_adler32, 0x4005edbc)
                 [!provide]                PROVIDE (mz_crc32, 0x4005ee88)
                 [!provide]                PROVIDE (mz_free, 0x4005eed4)
-                [!provide]                PROVIDE (__nedf2, 0x400636a8)
-                [!provide]                PROVIDE (__negdf2, 0x400634a0)
-                [!provide]                PROVIDE (__negdi2, 0x4000ca14)
-                [!provide]                PROVIDE (__negsf2, 0x400020c0)
-                [!provide]                PROVIDE (__negvdi2, 0x40002e98)
-                [!provide]                PROVIDE (__negvsi2, 0x40002e78)
-                [!provide]                PROVIDE (__nesf2, 0x40063374)
                 [!provide]                PROVIDE (notEqual256, 0x40015b04)
-                [!provide]                PROVIDE (__nsau_data, 0x3ff96544)
                 [!provide]                PROVIDE (one_bits, 0x3ff971f8)
                 [!provide]                PROVIDE (_open_r, 0x4000bd54)
-                [!provide]                PROVIDE (__paritysi2, 0x40002f3c)
                 [!provide]                PROVIDE (pbkdf2_sha1, 0x40060ba4)
                 [!provide]                PROVIDE (phy_get_romfuncs, 0x40004100)
-                [!provide]                PROVIDE (__popcountdi2, 0x40002ef8)
-                [!provide]                PROVIDE (__popcountsi2, 0x40002ed0)
-                [!provide]                PROVIDE (__popcount_tab, 0x3ff96544)
-                [!provide]                PROVIDE (__powidf2, 0x400638d4)
-                [!provide]                PROVIDE (__powisf2, 0x4006389c)
                 [!provide]                PROVIDE (_Pri_4_HandlerAddress, 0x3ffe0648)
                 [!provide]                PROVIDE (_Pri_5_HandlerAddress, 0x3ffe064c)
                 [!provide]                PROVIDE (r_btdm_option_data, 0x3ffae6e0)
@@ -2469,15 +2475,11 @@ END GROUP
                 [!provide]                PROVIDE (start_tb_console, 0x4005a980)
                 [!provide]                PROVIDE (_stat_r, 0x4000bcb4)
                 [!provide]                PROVIDE (_stext, 0x40000560)
-                [!provide]                PROVIDE (__subdf3, 0x400026e4)
-                [!provide]                PROVIDE (__subsf3, 0x400021d0)
                 [!provide]                PROVIDE (SubtractBigHex256, 0x40015bcc)
                 [!provide]                PROVIDE (SubtractBigHexMod256, 0x40015e8c)
                 [!provide]                PROVIDE (SubtractBigHexUint32_256, 0x40015f8c)
                 [!provide]                PROVIDE (SubtractFromSelfBigHex256, 0x40015c20)
                 [!provide]                PROVIDE (SubtractFromSelfBigHexSign256, 0x40015dc8)
-                [!provide]                PROVIDE (__subvdi3, 0x40002d20)
-                [!provide]                PROVIDE (__subvsi3, 0x40002cf8)
                 [!provide]                PROVIDE (sw_to_hw, 0x3ffb8d40)
                 [!provide]                PROVIDE (syscall_table_ptr_app, 0x3ffae020)
                 [!provide]                PROVIDE (syscall_table_ptr_pro, 0x3ffae024)
@@ -2495,20 +2497,9 @@ END GROUP
                 [!provide]                PROVIDE (tinfl_decompress, 0x4005ef30)
                 [!provide]                PROVIDE (tinfl_decompress_mem_to_callback, 0x40060090)
                 [!provide]                PROVIDE (tinfl_decompress_mem_to_mem, 0x40060050)
-                [!provide]                PROVIDE (__truncdfsf2, 0x40002b90)
                 [!provide]                PROVIDE (_tzname, 0x3ffae030)
                 [!provide]                PROVIDE (UartDev, 0x3ffe019c)
-                [!provide]                PROVIDE (__ucmpdi2, 0x40063840)
-                [!provide]                PROVIDE (__udivdi3, 0x4000cff8)
-                [!provide]                PROVIDE (__udivmoddi4, 0x40064ab0)
-                [!provide]                PROVIDE (__udivsi3, 0x4000c7c8)
-                [!provide]                PROVIDE (__udiv_w_sdiv, 0x40064aa8)
-                [!provide]                PROVIDE (__umoddi3, 0x4000d280)
-                [!provide]                PROVIDE (__umodsi3, 0x4000c7d0)
-                [!provide]                PROVIDE (__umulsidi3, 0x4000c7d8)
                 [!provide]                PROVIDE (_unlink_r, 0x4000bc84)
-                [!provide]                PROVIDE (__unorddf2, 0x400637f4)
-                [!provide]                PROVIDE (__unordsf2, 0x40063478)
                 [!provide]                PROVIDE (user_code_start, 0x3ffe0400)
                 [!provide]                PROVIDE (veryBigHexP256, 0x3ff9736c)
                 [!provide]                PROVIDE (__wctomb, 0x3ff96540)
@@ -2531,7 +2522,7 @@ END GROUP
                 0x40062e60                PROVIDE (esp_rom_spiflash_write_encrypted_disable, 0x40062e60)
                 0x40062df4                PROVIDE (esp_rom_spiflash_write_encrypted_enable, 0x40062df4)
                 0x40062e1c                PROVIDE (esp_rom_spiflash_prepare_encrypted_data, 0x40062e1c)
-                [!provide]                PROVIDE (esp_rom_spiflash_select_qio_pins, 0x40061ddc)
+                0x40061ddc                PROVIDE (esp_rom_spiflash_select_qio_pins, 0x40061ddc)
                 [!provide]                PROVIDE (esp_rom_spiflash_attach, 0x40062a6c)
                 [!provide]                PROVIDE (esp_rom_spiflash_config_clk, 0x40062bc8)
                 0x3ffae270                PROVIDE (g_rom_spiflash_chip, 0x3ffae270)
@@ -2577,14 +2568,14 @@ END GROUP
                 [!provide]                PROVIDE (uart_tx_wait_idle, 0x40009278)
                 [!provide]                PROVIDE (gpio_output_set, 0x40009b24)
                 0x40009b5c                PROVIDE (gpio_output_set_high, 0x40009b5c)
-                [!provide]                PROVIDE (gpio_input_get, 0x40009b88)
-                [!provide]                PROVIDE (gpio_input_get_high, 0x40009b9c)
+                0x40009b88                PROVIDE (gpio_input_get, 0x40009b88)
+                0x40009b9c                PROVIDE (gpio_input_get_high, 0x40009b9c)
                 0x40009edc                PROVIDE (gpio_matrix_in, 0x40009edc)
                 0x40009f0c                PROVIDE (gpio_matrix_out, 0x40009f0c)
                 0x40009fdc                PROVIDE (gpio_pad_select_gpio, 0x40009fdc)
                 [!provide]                PROVIDE (gpio_pad_set_drv, 0x4000a11c)
                 [!provide]                PROVIDE (gpio_pad_pulldown, 0x4000a348)
-                [!provide]                PROVIDE (gpio_pad_pullup, 0x4000a22c)
+                0x4000a22c                PROVIDE (gpio_pad_pullup, 0x4000a22c)
                 [!provide]                PROVIDE (gpio_pad_hold, 0x4000a734)
                 [!provide]                PROVIDE (gpio_pad_unhold, 0x4000a484)
                 [!provide]                PROVIDE (ets_aes_crypt, 0x4005c9b8)
@@ -2667,6 +2658,7 @@ END GROUP
                 [!provide]                PROVIDE (hci_tl_env, 0x3ffb8154)
                 [!provide]                PROVIDE (ld_acl_env, 0x3ffb8258)
                 [!provide]                PROVIDE (ea_env, 0x3ffb80ec)
+                [!provide]                PROVIDE (lc_sco_data_path_config, 0x3ffb81f8)
                 [!provide]                PROVIDE (ld_active_ch_map, 0x3ffb8334)
                 [!provide]                PROVIDE (ld_bcst_acl_env, 0x3ffb8274)
                 [!provide]                PROVIDE (ld_csb_rx_env, 0x3ffb8278)
@@ -2800,25 +2792,25 @@ END GROUP
                 [!provide]                PROVIDE (strcmp, 0x40001274)
                 [!provide]                PROVIDE (strcoll, 0x40001398)
                 [!provide]                PROVIDE (strcpy, 0x400013ac)
-                [!provide]                PROVIDE (strcspn, 0x4000c558)
+                0x4000c558                PROVIDE (strcspn, 0x4000c558)
                 [!provide]                PROVIDE (strdup, 0x4000143c)
                 [!provide]                PROVIDE (_strdup_r, 0x40001450)
                 [!provide]                PROVIDE (strftime, 0x40059ab4)
                 [!provide]                PROVIDE (strlcat, 0x40001470)
                 [!provide]                PROVIDE (strlcpy, 0x4000c584)
-                [!provide]                PROVIDE (strlen, 0x400014c0)
+                0x400014c0                PROVIDE (strlen, 0x400014c0)
                 [!provide]                PROVIDE (strlwr, 0x40001524)
                 [!provide]                PROVIDE (strncasecmp, 0x40001550)
                 [!provide]                PROVIDE (strncat, 0x4000c5c4)
                 [!provide]                PROVIDE (strncmp, 0x4000c5f4)
-                [!provide]                PROVIDE (strncpy, 0x400015d4)
+                0x400015d4                PROVIDE (strncpy, 0x400015d4)
                 [!provide]                PROVIDE (strndup, 0x400016b0)
                 [!provide]                PROVIDE (_strndup_r, 0x400016c4)
                 [!provide]                PROVIDE (strnlen, 0x4000c628)
                 [!provide]                PROVIDE (strrchr, 0x40001708)
                 [!provide]                PROVIDE (strsep, 0x40001734)
                 [!provide]                PROVIDE (strspn, 0x4000c648)
-                [!provide]                PROVIDE (strstr, 0x4000c674)
+                0x4000c674                PROVIDE (strstr, 0x4000c674)
                 [!provide]                PROVIDE (__strtok_r, 0x4000c6a8)
                 [!provide]                PROVIDE (strtok_r, 0x4000c70c)
                 [!provide]                PROVIDE (strtol, 0x4005681c)
@@ -2853,21 +2845,24 @@ END GROUP
                 [!provide]                PROVIDE (_wctomb_r, 0x40058f14)
                 [!provide]                PROVIDE (write, 0x4000181c)
                 [!provide]                PROVIDE (UART0, 0x3ff40000)
-                [!provide]                PROVIDE (SPI1, 0x3ff42000)
+                0x3ff42000                PROVIDE (SPI1, 0x3ff42000)
                 [!provide]                PROVIDE (SPI0, 0x3ff43000)
                 [!provide]                PROVIDE (GPIO, 0x3ff44000)
                 [!provide]                PROVIDE (SIGMADELTA, 0x3ff44f00)
                 [!provide]                PROVIDE (RTCCNTL, 0x3ff48000)
                 [!provide]                PROVIDE (RTCIO, 0x3ff48400)
                 [!provide]                PROVIDE (SENS, 0x3ff48800)
+                [!provide]                PROVIDE (HINF, 0x3ff4b000)
                 [!provide]                PROVIDE (UHCI1, 0x3ff4c000)
                 [!provide]                PROVIDE (I2S0, 0x3ff4f000)
                 [!provide]                PROVIDE (UART1, 0x3ff50000)
                 [!provide]                PROVIDE (I2C0, 0x3ff53000)
                 [!provide]                PROVIDE (UHCI0, 0x3ff54000)
+                [!provide]                PROVIDE (HOST, 0x3ff55000)
                 [!provide]                PROVIDE (RMT, 0x3ff56000)
                 [!provide]                PROVIDE (RMTMEM, 0x3ff56800)
                 [!provide]                PROVIDE (PCNT, 0x3ff57000)
+                [!provide]                PROVIDE (SLC, 0x3ff58000)
                 [!provide]                PROVIDE (LEDC, 0x3ff59000)
                 [!provide]                PROVIDE (MCPWM0, 0x3ff5e000)
                 [!provide]                PROVIDE (TIMERG0, 0x3ff5f000)
@@ -2877,92 +2872,99 @@ END GROUP
                 [!provide]                PROVIDE (SYSCON, 0x3ff66000)
                 [!provide]                PROVIDE (I2C1, 0x3ff67000)
                 [!provide]                PROVIDE (SDMMC, 0x3ff68000)
+                [!provide]                PROVIDE (CAN, 0x3ff6b000)
                 [!provide]                PROVIDE (MCPWM1, 0x3ff6c000)
                 [!provide]                PROVIDE (I2S1, 0x3ff6d000)
                 [!provide]                PROVIDE (UART2, 0x3ff6e000)
                 0x40008550                PROVIDE (ets_update_cpu_frequency, 0x40008550)
 OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.elf elf32-xtensa-le)
 
-.debug_frame    0x00000000      0xc90
+.debug_frame    0x00000000      0xdd8
  .debug_frame   0x00000000       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .debug_frame   0x00000058       0xe8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .debug_frame   0x00000140      0x118 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_frame   0x00000258       0xd0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_frame   0x00000328       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_frame   0x00000380      0x100 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_frame   0x00000480       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_frame   0x000004a8       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
- .debug_frame   0x000004d0       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_frame   0x00000510       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_frame   0x00000568       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_frame   0x000005d8      0x208 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_frame   0x000007e0      0x2e0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_frame   0x00000ac0       0xb8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_frame   0x00000b78       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_frame   0x00000bd0       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_frame   0x00000c40       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .debug_frame   0x00000c68       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000258      0x100 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_frame   0x00000358       0xd0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_frame   0x00000428       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_frame   0x00000480      0x100 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_frame   0x00000580       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_frame   0x000005a8       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .debug_frame   0x000005d0       0x88 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_frame   0x00000658       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_frame   0x000006b0       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_frame   0x00000720      0x208 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_frame   0x00000928      0x2e0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_frame   0x00000c08       0xb8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_frame   0x00000cc0       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_frame   0x00000d18       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_frame   0x00000d88       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_frame   0x00000db0       0x28 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_info     0x00000000     0x95cb
- .debug_info    0x00000000      0x50d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- .debug_info    0x0000050d     0x13d1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- .debug_info    0x000018de     0x1695 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_info    0x00002f73      0xbfa C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x00003b6d      0x258 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_info    0x00003dc5     0x1291 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_info    0x00005056      0x526 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_info    0x0000557c      0x264 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
- .debug_info    0x000057e0      0x16b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_info    0x0000594b      0x44d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_info    0x00005d98      0x900 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_info    0x00006698      0xaf5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x0000718d     0x151e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_info    0x000086ab      0x39b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_info    0x00008a46      0x3d8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_info    0x00008e1e      0x118 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_info    0x00008f36       0xcd c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .debug_info    0x00009003      0x5c8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+.debug_info     0x00000000     0xc014
+ .debug_info    0x00000000      0x31a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+ .debug_info    0x0000031a     0x1371 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ .debug_info    0x0000168b     0x14c0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .debug_info    0x00002b4b     0x298f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_info    0x000054da      0xbfa C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x000060d4      0x1fe C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x000062d2     0x11f7 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x000074c9      0x526 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x000079ef      0x279 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .debug_info    0x00007c68      0x789 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_info    0x000083f1      0x44d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000883e      0x900 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_info    0x0000913e      0xaf5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x00009c33     0x14bc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_info    0x0000b0ef      0x3aa C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_info    0x0000b499       0x95 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .debug_info    0x0000b52e      0x339 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_info    0x0000b867      0x118 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_info    0x0000b97f       0xcd c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_info    0x0000ba4c      0x5c8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_abbrev   0x00000000     0x20fa
- .debug_abbrev  0x00000000      0x18c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- .debug_abbrev  0x0000018c      0x3ae C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- .debug_abbrev  0x0000053a      0x41d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_abbrev  0x00000957      0x22f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x00000b86      0x126 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x00000cac      0x2a4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x00000f50      0x17b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x000010cb      0x108 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
- .debug_abbrev  0x000011d3       0xd5 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_abbrev  0x000012a8      0x17d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_abbrev  0x00001425      0x1f3 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_abbrev  0x00001618      0x22e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x00001846      0x388 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_abbrev  0x00001bce      0x17a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_abbrev  0x00001d48      0x15d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_abbrev  0x00001ea5       0x96 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_abbrev  0x00001f3b       0x60 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x00001f9b      0x15f c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+.debug_abbrev   0x00000000     0x241b
+ .debug_abbrev  0x00000000      0x157 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+ .debug_abbrev  0x00000157      0x361 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ .debug_abbrev  0x000004b8      0x3fc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .debug_abbrev  0x000008b4      0x331 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_abbrev  0x00000be5      0x22f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x00000e14      0x107 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x00000f1b      0x28a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x000011a5      0x17b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x00001320      0x108 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .debug_abbrev  0x00001428      0x19e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_abbrev  0x000015c6      0x17d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x00001743      0x1f3 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_abbrev  0x00001936      0x22e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x00001b64      0x358 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x00001ebc      0x17a C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_abbrev  0x00002036       0x5b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .debug_abbrev  0x00002091      0x135 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_abbrev  0x000021c6       0x96 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_abbrev  0x0000225c       0x60 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x000022bc      0x15f c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_loc      0x00000000     0x4d50
- .debug_loc     0x00000000       0xb6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- .debug_loc     0x000000b6      0x872 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- .debug_loc     0x00000928      0x751 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_loc     0x00001079      0x638 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x000016b1       0x91 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x00001742      0xac1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x00002203      0x1b6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x000023b9       0x74 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_loc     0x0000242d      0x135 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_loc     0x00002562      0x4ad C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_loc     0x00002a0f      0xa20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x0000342f      0xa5e C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_loc     0x00003e8d      0x1ca C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_loc     0x00004057      0x2dd C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_loc     0x00004334       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_loc     0x00004347       0x21 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .debug_loc     0x00004368      0x9e8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+.debug_loc      0x00000000     0x5091
+ .debug_loc     0x00000000       0x79 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+ .debug_loc     0x00000079      0x86c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ .debug_loc     0x000008e5      0x761 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .debug_loc     0x00001046      0x232 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_loc     0x00001278      0x638 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x000018b0       0x45 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x000018f5      0xac1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x000023b6      0x1b6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x0000256c      0x2cd C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_loc     0x00002839      0x135 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x0000296e      0x4ad C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_loc     0x00002e1b      0xa20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x0000383b      0xa18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_loc     0x00004253      0x1dd C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_loc     0x00004430      0x245 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_loc     0x00004675       0x13 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_loc     0x00004688       0x21 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_loc     0x000046a9      0x9e8 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_aranges  0x00000000      0x580
+.debug_aranges  0x00000000      0x618
  .debug_aranges
                 0x00000000       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .debug_aranges
@@ -2970,111 +2972,122 @@ OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.
  .debug_aranges
                 0x00000090       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
  .debug_aranges
-                0x00000100       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+                0x00000100       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
  .debug_aranges
-                0x00000158       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                0x00000168       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
  .debug_aranges
-                0x00000188       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                0x000001c0       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
  .debug_aranges
-                0x000001f0       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+                0x000001f0       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
  .debug_aranges
-                0x00000210       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+                0x00000258       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
  .debug_aranges
-                0x00000230       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+                0x00000278       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
  .debug_aranges
-                0x00000258       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+                0x00000298       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
  .debug_aranges
-                0x00000288       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+                0x000002d8       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
  .debug_aranges
-                0x000002c0       0xc0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000308       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
  .debug_aranges
-                0x00000380      0x108 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                0x00000340       0xc0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
  .debug_aranges
-                0x00000488       0x50 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                0x00000400      0x108 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x000004d8       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                0x00000508       0x50 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
  .debug_aranges
-                0x00000508       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+                0x00000558       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
  .debug_aranges
-                0x00000540       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+                0x00000570       0x30 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
  .debug_aranges
-                0x00000560       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+                0x000005a0       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_aranges
+                0x000005d8       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_aranges
+                0x000005f8       0x20 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x00000000      0x548
+.debug_ranges   0x00000000      0x600
  .debug_ranges  0x00000000       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .debug_ranges  0x00000020       0x68 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .debug_ranges  0x00000088       0x60 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_ranges  0x000000e8       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x00000130       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x00000150       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x000001c0       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x00000218       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
- .debug_ranges  0x00000228       0x18 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_ranges  0x00000240       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_ranges  0x00000260       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_ranges  0x00000288       0xb0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_ranges  0x00000338      0x128 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_ranges  0x00000460       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_ranges  0x000004a0       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_ranges  0x000004c0       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_ranges  0x000004e8       0x60 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+ .debug_ranges  0x000000e8       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_ranges  0x00000140       0x48 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x00000188       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x000001a8       0x70 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x00000218       0x58 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x00000270       0x10 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .debug_ranges  0x00000280       0x78 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_ranges  0x000002f8       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_ranges  0x00000318       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_ranges  0x00000340       0xb0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_ranges  0x000003f0      0x128 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_ranges  0x00000518       0x40 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_ranges  0x00000558       0x20 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_ranges  0x00000578       0x28 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_ranges  0x000005a0       0x60 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_line     0x00000000     0x5b3e
- .debug_line    0x00000000      0x389 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
- .debug_line    0x00000389      0x8ea C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x00000c73      0x8f4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
- .debug_line    0x00001567      0x580 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x00001ae7      0x388 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
- .debug_line    0x00001e6f      0xa65 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
- .debug_line    0x000028d4      0x350 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
- .debug_line    0x00002c24      0x1e7 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x00002e0b      0x1f4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
- .debug_line    0x00002fff      0x3c8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x000033c7      0x4ee C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
- .debug_line    0x000038b5      0xad0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x00004385      0xcac C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
- .debug_line    0x00005031      0x3a1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
- .debug_line    0x000053d2      0x3c8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
- .debug_line    0x0000579a      0x18d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
- .debug_line    0x00005927       0x89 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
- .debug_line    0x000059b0      0x18e c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+.debug_line     0x00000000     0x651e
+ .debug_line    0x00000000      0x307 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+ .debug_line    0x00000307      0x8fd C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x00000c04      0x956 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .debug_line    0x0000155a      0x4fb C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+ .debug_line    0x00001a55      0x580 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x00001fd5      0x38c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x00002361      0xa65 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x00002dc6      0x350 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x00003116      0x1e7 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x000032fd      0x5c4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x000038c1      0x3c8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x00003c89      0x4ee C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_line    0x00004177      0xad0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x00004c47      0xcc2 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+ .debug_line    0x00005909      0x3a1 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .debug_line    0x00005caa       0xfc C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+ .debug_line    0x00005da6      0x3d4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+ .debug_line    0x0000617a      0x18d C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_line    0x00006307       0x89 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_line    0x00006390      0x18e c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
 
-.debug_str      0x00000000     0x29a4
- .debug_str     0x00000000      0x489 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
-                                0x515 (size before relaxing)
- .debug_str     0x00000489      0x4c4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
-                                0x945 (size before relaxing)
- .debug_str     0x0000094d      0x603 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
-                                0xa9a (size before relaxing)
- .debug_str     0x00000f50      0x230 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
+.debug_str      0x00000000     0x41e3
+ .debug_str     0x00000000      0x304 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
+                                0x368 (size before relaxing)
+ .debug_str     0x00000304      0x4d4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
+                                0x7ca (size before relaxing)
+ .debug_str     0x000007d8      0x714 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+                                0xa67 (size before relaxing)
+ .debug_str     0x00000eec     0x1852 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
+                               0x1b8b (size before relaxing)
+ .debug_str     0x0000273e      0x230 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
                                 0x58a (size before relaxing)
- .debug_str     0x00001180       0x8f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
-                                0x23d (size before relaxing)
- .debug_str     0x0000120f      0x314 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
-                                0xa0c (size before relaxing)
- .debug_str     0x00001523       0xb6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
+ .debug_str     0x0000296e       0x8f C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
+                                0x24a (size before relaxing)
+ .debug_str     0x000029fd      0x27c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
+                                0x928 (size before relaxing)
+ .debug_str     0x00002c79       0xb6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_partitions.o)
                                 0x3dd (size before relaxing)
- .debug_str     0x000015d9      0x23b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
-                                0x378 (size before relaxing)
- .debug_str     0x00001814       0x81 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
-                                0x1da (size before relaxing)
- .debug_str     0x00001895       0xf6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
+ .debug_str     0x00002d2f      0x23b C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_clock.o)
+                                0x38f (size before relaxing)
+ .debug_str     0x00002f6a      0x257 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_common.o)
+                                0x59f (size before relaxing)
+ .debug_str     0x000031c1       0xf6 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_sha.o)
                                 0x2c0 (size before relaxing)
- .debug_str     0x0000198b      0x1b8 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
+ .debug_str     0x000032b7      0x1a0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/log\liblog.a(log.o)
                                 0x35c (size before relaxing)
- .debug_str     0x00001b43      0x489 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_str     0x00003457      0x370 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
                                 0x755 (size before relaxing)
- .debug_str     0x00001fcc      0x563 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
-                                0x971 (size before relaxing)
- .debug_str     0x0000252f      0x130 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
-                                0x372 (size before relaxing)
- .debug_str     0x0000265f       0xbd C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
-                                0x237 (size before relaxing)
- .debug_str     0x0000271c       0x74 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
+ .debug_str     0x000037c7      0x549 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
+                                0x97a (size before relaxing)
+ .debug_str     0x00003d10      0x143 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+                                0x385 (size before relaxing)
+ .debug_str     0x00003e53       0x44 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
+                                0x14a (size before relaxing)
+ .debug_str     0x00003e97       0xc4 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
+                                0x249 (size before relaxing)
+ .debug_str     0x00003f5b       0x74 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
                                 0x180 (size before relaxing)
- .debug_str     0x00002790      0x138 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
+ .debug_str     0x00003fcf      0x138 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
                                 0x1de (size before relaxing)
- .debug_str     0x000028c8       0xdc c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
+ .debug_str     0x00004107       0xdc c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_udivdi3.o)
                                 0x258 (size before relaxing)
 
 .comment        0x00000000       0x3b
@@ -3082,6 +3095,7 @@ OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.
                                  0x3c (size before relaxing)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
@@ -3093,6 +3107,7 @@ OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
  .comment       0x0000003b       0x3c C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
  .comment       0x0000003b       0x3c c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)
@@ -3102,6 +3117,7 @@ OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.
  .xtensa.info   0x00000000       0x38 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/main\libmain.a(bootloader_start.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_utility.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_init.o)
+ .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(flash_qio_mode.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_flash.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(bootloader_random.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader_support\libbootloader_support.a(esp_image_format.o)
@@ -3113,6 +3129,7 @@ OUTPUT(C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/bootloader.
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/spi_flash\libspi_flash.a(spi_flash_rom_patch.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_clk.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_time.o)
+ .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(gpio_periph.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(rtc_init.o)
  .xtensa.info   0x00000038        0x0 C:/msys32/home/manue/esp/wifi_watchdog_board/build/bootloader/soc\libsoc.a(cpu_util.o)
  .xtensa.info   0x00000038        0x0 c:/msys32/opt/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\libgcc.a(_bswapsi2.o)

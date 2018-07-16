@@ -35,13 +35,15 @@ src/fast_crypto/fast_crypto_internal.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h \
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/sha1_i.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/md5_i.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/includes.h:
@@ -114,19 +116,23 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/sha1_i.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/md5_i.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
 /home/manue/esp/esp-idf/components/wpa_supplicant/src/fast_crypto/fast_crypto_internal.c:

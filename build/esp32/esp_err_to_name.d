@@ -32,11 +32,7 @@ esp_err_to_name.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
- C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp_http_client/include/esp_http_client.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -54,7 +50,6 @@ esp_err_to_name.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -77,12 +72,20 @@ esp_err_to_name.o: \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ C:/msys32/home/manue/esp/esp-idf/components/nghttp/port/include/http_parser.h \
+ C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
+ C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
@@ -95,15 +98,18 @@ esp_err_to_name.o: \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h \
  C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
@@ -121,6 +127,7 @@ esp_err_to_name.o: \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_now.h \
@@ -197,15 +204,7 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_image_format.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h:
+C:/msys32/home/manue/esp/esp-idf/components/esp_http_client/include/esp_http_client.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -240,8 +239,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
@@ -287,7 +284,11 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -298,6 +299,18 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/nghttp/port/include/http_parser.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_image_format.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
@@ -323,11 +336,15 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -340,6 +357,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -374,6 +393,8 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_mesh_internal.h:
 

@@ -20,10 +20,10 @@ port/crypto_hash_mbedtls/crypto_hash_sha256_mbedtls.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h \
  C:/msys32/home/manue/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h
@@ -68,13 +68,13 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
 

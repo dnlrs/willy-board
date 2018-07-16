@@ -35,9 +35,13 @@ src/crypto/bignum.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h \
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/src/crypto/bignum.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/src/crypto/libtommath.h
 
@@ -111,11 +115,19 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/src/crypto/bignum.h:
 

@@ -10,11 +10,11 @@ src/esp_image_format.o: \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
+ c:\msys32\home\manue\esp\wifi_watchdog_board\build\include\sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
- c:\msys32\home\manue\esp\wifi_watchdog_board\build\include\sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -42,6 +42,8 @@ C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
 
+c:\msys32\home\manue\esp\wifi_watchdog_board\build\include\sdkconfig.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
@@ -49,8 +51,6 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
-
-c:\msys32\home\manue\esp\wifi_watchdog_board\build\include\sdkconfig.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

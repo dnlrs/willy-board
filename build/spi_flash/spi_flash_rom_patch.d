@@ -28,6 +28,7 @@ spi_flash_rom_patch.o: \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/spi_flash.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h
 
@@ -86,6 +87,8 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/spi_flash.h:
 

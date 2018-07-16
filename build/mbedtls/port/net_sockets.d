@@ -2,11 +2,12 @@ port/net_sockets.o: \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/net_sockets.c \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/newlib.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/config.h \
@@ -29,24 +30,24 @@ port/net_sockets.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/net_sockets.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/md.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
@@ -54,12 +55,14 @@ port/net_sockets.o: \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h \
  C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_system.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
@@ -77,7 +80,9 @@ port/net_sockets.o: \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -107,7 +112,6 @@ port/net_sockets.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -137,15 +141,17 @@ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_con
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/newlib.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 
@@ -191,41 +197,41 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/net_sockets.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/md.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h:
 
@@ -241,6 +247,8 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h:
@@ -252,6 +260,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -287,7 +297,11 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -346,8 +360,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 

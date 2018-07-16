@@ -17,18 +17,21 @@ core/memp.o: C:/msys32/home/manue/esp/esp-idf/components/lwip/core/memp.c \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h \
  C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_system.h \
@@ -51,7 +54,9 @@ core/memp.o: C:/msys32/home/manue/esp/esp-idf/components/lwip/core/memp.c \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -81,7 +86,6 @@ core/memp.o: C:/msys32/home/manue/esp/esp-idf/components/lwip/core/memp.c \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -182,6 +186,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h:
@@ -194,6 +200,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h:
@@ -205,6 +213,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -250,7 +260,11 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -309,8 +323,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 

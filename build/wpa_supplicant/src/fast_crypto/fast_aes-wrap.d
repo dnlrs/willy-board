@@ -35,12 +35,13 @@ src/fast_crypto/fast_aes-wrap.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/aes.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/aes_wrap.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/aes.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/aes_alt.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/hwcrypto/aes.h \
@@ -116,17 +117,19 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/aes.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/aes_wrap.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/aes.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
 

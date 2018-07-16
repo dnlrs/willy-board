@@ -28,6 +28,7 @@ spiffs/src/spiffs_nucleus.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
@@ -94,6 +95,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 

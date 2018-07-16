@@ -52,7 +52,6 @@ ledc.o: C:/msys32/home/manue/esp/esp-idf/components/driver/ledc.c \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -74,6 +73,8 @@ ledc.o: C:/msys32/home/manue/esp/esp-idf/components/driver/ledc.c \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -83,6 +84,8 @@ ledc.o: C:/msys32/home/manue/esp/esp-idf/components/driver/ledc.c \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_dport_access.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/ledc_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/ledc_struct.h \
  C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
@@ -194,8 +197,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -238,6 +239,10 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
@@ -255,6 +260,10 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_dport_access.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/ledc_reg.h:
 

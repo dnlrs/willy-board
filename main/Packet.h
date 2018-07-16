@@ -25,11 +25,14 @@
 #include <errno.h>
 #include <string>
 #include "Timeline.h"
+#include "NetWrap.h"
 #include <iostream>
 
 #define MAC_LENGTH 6
 #define MAX_SSID_LENGTH 32
 #define MD5_HASH_LENGTH 32
+
+using namespace std;
 
 typedef struct {
 	unsigned frame_ctrl:16;
@@ -69,13 +72,28 @@ class Packet{
 
 public:
 
-	Packet(){ };
+	Packet() {};
+	Packet(string s): hash(s) { };
+
+	string temp_print(){
+		return hash;
+	}
 	int fetchData(void *buff, Timeline *time_offset);
 	void print();
 	static bool isProbeReq(void *buff);
 	int send(int socket);
 	bool operator<(const Packet& p) const {
    		return this->hash < p.hash;
+	}
+
+	bool temp_send(NetWrap& net){
+		int rssi = htonl(this->rssi);
+		int w_check = write(net.get_descriptor(),&rssi,sizeof(int));
+		if(w_check <= 0){
+			printf("write error on rssi. errno: %s\n",strerror(errno));
+			return false;
+		}
+		return true;
 	}
 
 };

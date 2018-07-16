@@ -33,7 +33,7 @@ Packet::fetchData(void *buff, Timeline *time_offset){
 	this->sequence_ctrl = hdr->sequence_ctrl;
 	//this->crc = network_data->crc; //deprecated
 	this->rssi = pkt_ctrl.rssi;
-	this->timestamp = (uint16_t)time_offset->now();
+	this->timestamp = 0;//(uint16_t)time_offset->now();
 	this->channel = (uint8_t)pkt_ctrl.channel;
 
 	int i,j;

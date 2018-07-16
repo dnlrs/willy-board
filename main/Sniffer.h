@@ -1,66 +1,40 @@
-/*
- * SNIFFER.h
- */
+#pragma once
 
-#ifndef _SNIFFER_HANDLER
-#define _SNIFFER_HANDLER
-
-#include <cstdlib>
-#include <cstdio>
 #include "sdkconfig.h"
-#include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
-#include "esp_event.h"
-#include "esp_event_loop.h"
-#include "time.h"
-#include "freertos/event_groups.h"
 #include "esp_system.h"
-#include "esp_log.h"
-#include "nvs_flash.h"
-#include <string.h>
-#include "lwip/sockets.h"
-#include <errno.h>
-#include <string>
+#include "esp_task_wdt.h"
 #include <iostream>
-#include <set>
-#include "WiFi.h"
-#include "Packet.h"
+#include "NetWrap.h"
+#include "PacketContainer.h"
 
+#define	WIFI_CHANNEL_MAX 				13 		//according to EU standard
+#define	WIFI_CHANNEL_SWITCH_INTERVAL	500
+#define PROBE_REQ_ID					0x40
+#define MAC_LENGTH						6 		//bytes
 
-extern WiFi *wifi_ap;
+#define TASK_RESET_PERIOD_S     		2 //seconds
+#define STACK_SIZE 						4096
 
-/* TO BE WRAPPED */
-#define SERVER_IP "192.168.43.83"
-//#define SERVER_IP "192.168.43.83"
-#define SERVER_PORT 27015
-#define DEFAULT_SCAN_DURATION 10
+#define DEFAULT_SERVER_IP 				"192.168.1.4"
+#define DEFAULT_SERVER_PORT 			27015
+
+#define BLINK_GPIO 						2
 
 
 class Sniffer {
+	TaskHandle_t sniffer_handle; //rtos thread handler
+	TaskHandle_t sender_handle;
 
-	Sniffer(){ };
+	static void sniffer_task(void *pvParameters);
+	static void sender_task(void *pvParameters);
 public:
 
-	
-	//~Sniffer();
+	Sniffer();
+	~Sniffer();
 
-	static void start();
-	static void incoming_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type);
-	static esp_err_t sys_event_handler(void *ctx, system_event_t *event);
-	static void scan();
-	static void scan(long scan_duration);
-	static void send_packets(int sock);
-	static void stop();
-	static int syncTimeline(int sock);
-	static void print_container();
-	static int create_link(const char *server_ip, unsigned server_port);
-	static void initPhase(int sock);
-
+	static void incoming_packet_cb(void* buff, wifi_promiscuous_pkt_type_t type);
 };
-
-
-
-#endif

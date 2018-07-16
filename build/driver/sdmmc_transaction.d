@@ -53,7 +53,6 @@ sdmmc_transaction.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -76,7 +75,9 @@ sdmmc_transaction.o: \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -85,6 +86,8 @@ sdmmc_transaction.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/sdmmc_periph.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_reg.h \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
@@ -200,8 +203,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -246,7 +247,11 @@ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -263,6 +268,10 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h:
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/semphr.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/sdmmc_periph.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_reg.h:
 

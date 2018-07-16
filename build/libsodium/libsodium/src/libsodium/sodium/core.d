@@ -15,6 +15,7 @@ libsodium/src/libsodium/sodium/core.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/lock.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/types.h \
@@ -73,6 +74,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/lock.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
 

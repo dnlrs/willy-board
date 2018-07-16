@@ -11,7 +11,6 @@ portasm.o: C:/msys32/home/manue/esp/esp-idf/components/freertos/portasm.S \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/simcall.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -43,8 +42,6 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/simcall.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 

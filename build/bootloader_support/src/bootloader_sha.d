@@ -28,9 +28,9 @@ src/bootloader_sha.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/param.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
  C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h
 
 C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h:
@@ -89,11 +89,11 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/param.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+C:/msys32/home/manue/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h:
 /home/manue/esp/esp-idf/components/bootloader_support/src/bootloader_sha.c:

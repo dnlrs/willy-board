@@ -26,12 +26,13 @@ partition.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
  C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_partition.h \
  C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
@@ -96,17 +97,19 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
+C:/msys32/home/manue/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/spi_flash/include/esp_partition.h:
 

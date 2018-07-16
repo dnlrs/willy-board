@@ -32,6 +32,7 @@ libsodium/src/libsodium/sodium/utils.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
  C:/msys32/home/manue/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
@@ -100,6 +101,8 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h:
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 

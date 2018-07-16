@@ -51,7 +51,9 @@ gdbstub.o: C:/msys32/home/manue/esp/esp-idf/components/esp32/gdbstub.c \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -157,5 +159,9 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 /home/manue/esp/esp-idf/components/esp32/./gdbstub.c:

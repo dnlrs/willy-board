@@ -50,7 +50,9 @@ sdspi_host.o: \
  C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdmmc_defs.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/limits.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdspi_host.h \
@@ -71,7 +73,6 @@ sdspi_host.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portable.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -91,9 +92,13 @@ sdspi_host.o: \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/spi_common.h \
- C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/lldesc.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/spi_periph.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdmmc_host.h \
  C:/msys32/home/manue/esp/esp-idf/components/driver/sdspi_private.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h \
@@ -199,7 +204,11 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdmmc_defs.h:
 
@@ -241,8 +250,6 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/deprecated
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -281,11 +288,19 @@ C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/spi_common.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
-
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/lldesc.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/include/soc/spi_periph.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/driver/include/driver/sdmmc_host.h:
 

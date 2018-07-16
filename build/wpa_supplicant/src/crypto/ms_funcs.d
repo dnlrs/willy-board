@@ -29,21 +29,25 @@ src/crypto/ms_funcs.o: \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_assert.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/assert.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/assert.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_assert.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/port/include/endian.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/sha1.h \
  C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/ms_funcs.h \
- C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h \
+ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/includes.h:
 
@@ -103,17 +107,19 @@ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_assert.h:
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/assert.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/assert.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_assert.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/endian.h:
 
@@ -127,9 +133,15 @@ C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/sha1.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/ms_funcs.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h:
 /home/manue/esp/esp-idf/components/wpa_supplicant/src/crypto/ms_funcs.c:
