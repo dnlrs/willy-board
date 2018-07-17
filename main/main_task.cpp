@@ -25,7 +25,6 @@ WiFi *wifi_handler;
 
 void app_main(void)
 {
-	this_thread::sleep_for(chrono::seconds(5));
 	std::cout<<"probe request watchdog starting..."<<std::endl;
 
 	packet_queue = new PacketContainer(10);

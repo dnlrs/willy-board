@@ -98,23 +98,18 @@ main_task.o: \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/NetWrap.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event.h \
- C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event_loop.h \
- C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
- C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/string.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
- C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h \
- C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h \
- C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
- C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/timers.h \
- C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/task.h \
- C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
- C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event_loop.h \
+ C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/WiFi.h
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Sniffer.h:
@@ -313,13 +308,7 @@ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/NetWrap.h:
 
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event_loop.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h:
+C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h:
 
@@ -331,21 +320,17 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
-C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h:
-
-C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/timers.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/task.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
-
-C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
-
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event_loop.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h:
+
+C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/WiFi.h:
 /home/manue/esp/wifi_watchdog_board/main/./main_task.cpp:

@@ -27,6 +27,20 @@ NetWrap::connect(){
 	return true;
 }
 
+bool 
+NetWrap::send(Packet& p){
+	char buf[512];
+	p.serialize(buf);
+
+	int w_check = write(socket_dsc,buf,p.get_packet_size());
+	if(w_check <= 0){
+		cout<<"write error. errno: "<<strerror(errno)<<endl;
+		return false;
+	}
+	return true;
+}
+
+
 NetWrap::~NetWrap(){
 	close(socket_dsc);
 	socket_dsc = -1;

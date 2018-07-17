@@ -1,32 +1,12 @@
-/*
- * PACKET.h
- */
-
-#ifndef _PACKET_STRUCT
-#define _PACKET_STRUCT
-
-#include <cstdlib>
-#include <cstdio>
-#include "sdkconfig.h"
-#include <stdio.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_wifi.h"
+#pragma once
 #include "esp_wifi_types.h"
-#include "esp_event.h"
-#include "esp_event_loop.h"
-#include "time.h"
-#include "freertos/event_groups.h"
-#include "esp_system.h"
-#include "esp_log.h"
-#include "nvs_flash.h"
 #include <string.h>
 #include "lwip/sockets.h"
-#include <errno.h>
 #include <string>
-#include "Timeline.h"
-#include "NetWrap.h"
 #include <iostream>
+#include <sstream>
+
+#include "Timeline.h"
 
 #define MAC_LENGTH 6
 #define MAX_SSID_LENGTH 32
@@ -55,21 +35,16 @@ typedef struct {
 } wifi_frame_t;
 
 class Packet{
-	/* FIELDS IN ALPHABETICAL ORDER */
-	uint8_t channel; //channel where the packet were sniffed
-	std::string hash;
-	uint8_t mac_addr[MAC_LENGTH]; /* sender address */
+	int channel;
 	int rssi;
-	uint16_t sequence_ctrl;
-	char ssid[MAX_SSID_LENGTH+1];
-	uint16_t timestamp;
-	
-	/* USED TO CALCULATE HASH BUT NOT SAVED HERE */
-	//uint32_t internal_timestamp; 
-	//uint32_t crc; //deprecated
+	int sequence_ctrl;
+	int timestamp;
+	int ssid_length;
+	char mac_addr[MAC_LENGTH];
+	char ssid[MAX_SSID_LENGTH + 1];
+	string hash;
 
-	std::string genHash(uint32_t internal_timestamp);
-
+	std::string genHash();
 public:
 
 	Packet() {};
@@ -86,18 +61,11 @@ public:
    		return this->hash < p.hash;
 	}
 
-	bool temp_send(NetWrap& net){
-		int rssi = htonl(this->rssi);
-		int w_check = write(net.get_descriptor(),&rssi,sizeof(int));
-		if(w_check <= 0){
-			printf("write error on rssi. errno: %s\n",strerror(errno));
-			return false;
-		}
-		return true;
+	int get_packet_size(){
+		return 5*sizeof(int) + (ssid_length+MD5_HASH_LENGTH+MAC_LENGTH)*sizeof(char);
 	}
 
+	void serialize(char *buf);
+	void deserialize(char *buf);
+
 };
-
-
-
-#endif

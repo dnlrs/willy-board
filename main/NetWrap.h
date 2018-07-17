@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Packet.h"
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
 #include "esp_event.h"
@@ -7,7 +8,9 @@
 #include "nvs_flash.h"
 #include <string.h>
 #include "lwip/sockets.h"
+#include <string.h>
 #include <iostream>
+
 
 using namespace std;
 
@@ -24,7 +27,7 @@ public:
 	bool connect();
 
 	int get_descriptor(){ return socket_dsc; }
-
+	bool send(Packet& p);
 
 	~NetWrap();
 };

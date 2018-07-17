@@ -2,18 +2,20 @@
 
 using namespace std;
 
-Sniffer::Sniffer(): sniffer_handle(NULL) {
-	esp_wifi_set_promiscuous_rx_cb(&Sniffer::incoming_packet_cb);
-	xTaskCreatePinnedToCore(Sniffer::sniffer_task, "sniffer", STACK_SIZE, NULL, 2, &sniffer_handle, 0);
-	if(sniffer_handle == NULL){
-		cout<<"error creating sniffer task"<<endl;
-	}
+Sniffer::Sniffer(): sniffer_handle(NULL), sender_handle(NULL) {
 
 	TaskHandle_t sender_handle;
 	xTaskCreatePinnedToCore(Sniffer::sender_task,"sender", STACK_SIZE, NULL, 2, &sender_handle, 1);
 	if(sender_handle == NULL){
 		cout<<"error creating sender task"<<endl;
 	}
+
+	esp_wifi_set_promiscuous_rx_cb(&Sniffer::incoming_packet_cb);
+	xTaskCreatePinnedToCore(Sniffer::sniffer_task, "sniffer", STACK_SIZE, NULL, 2, &sniffer_handle, 0);
+	if(sniffer_handle == NULL){
+		cout<<"error creating sniffer task"<<endl;
+	}
+
 }
 
 Sniffer::~Sniffer(){ 
@@ -42,9 +44,6 @@ Sniffer::sniffer_task(void *pvParameters){
 			channel = (channel % WIFI_CHANNEL_MAX) + 1;
 		}
 		ESP_ERROR_CHECK(esp_wifi_set_promiscuous(false));
-
-        esp_task_wdt_reset();
-        vTaskDelay(pdMS_TO_TICKS(TASK_RESET_PERIOD_S * 1000));
     }
 }
 
@@ -52,8 +51,8 @@ void
 Sniffer::sender_task(void *pvParameters){
     cout<<"i'm sender task at core: "<< xPortGetCoreID() <<endl;
 
-    NetWrap sock_dsc(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
-    sock_dsc.connect();
+    NetWrap net_handler(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
+    net_handler.connect();
 
     gpio_pad_select_gpio((gpio_num_t)BLINK_GPIO);
     gpio_set_direction((gpio_num_t)BLINK_GPIO, GPIO_MODE_OUTPUT);
@@ -62,17 +61,18 @@ Sniffer::sender_task(void *pvParameters){
     	
     	Packet p;
     	packet_queue->pop(p);
+
     	p.print();
-    	if(p.temp_send(sock_dsc)){
-	        /* Blink on (output high) */
+
+       	if(net_handler.send(p)){
 	        gpio_set_level((gpio_num_t)BLINK_GPIO, 1);
 	        vTaskDelay(10 / portTICK_RATE_MS);
 	        gpio_set_level((gpio_num_t)BLINK_GPIO, 0);
 	        vTaskDelay(10 / portTICK_RATE_MS);
 	    }
 
-        esp_task_wdt_reset();
-        vTaskDelay(pdMS_TO_TICKS(TASK_RESET_PERIOD_S * 1000));
+
+        vTaskDelay(2000 / portTICK_RATE_MS);
     }
 }
 
@@ -91,8 +91,9 @@ Sniffer::incoming_packet_cb(void* buff, wifi_promiscuous_pkt_type_t type){
 	if(p.fetchData(buff, NULL) == 0) 
 	{
 		//p.print();
-		packet_queue->push(p);
-	
-		cout<<"pushed"<<endl;
+		if(packet_queue->timed_push(p, 5))
+			cout<<"pushed"<<endl;
+		else
+			cout<<"full queue timeout"<<endl;
 	}
 }
