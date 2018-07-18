@@ -8,11 +8,9 @@ NetWrap::NetWrap(const char *server_ip, unsigned server_port){
 	serverAddress.sin_port = htons(server_port);
 
 	socket_dsc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if(socket_dsc < 0){
+	if(socket_dsc < 0)
 		printf("socket error. errno: %s\n",strerror(errno));
-		link_created = false;
-	} else 
-		link_created = true;
+	
 }
 
 bool 
@@ -26,6 +24,21 @@ NetWrap::connect(){
 	
 	return true;
 }
+
+bool
+NetWrap::disconnect(){
+	if(socket_dsc > 0)
+		close(socket_dsc);
+
+	socket_dsc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if(socket_dsc < 0){
+		printf("socket error. errno: %s\n",strerror(errno));
+		return false;
+	}
+	return true;
+}
+
+
 
 bool 
 NetWrap::send(Packet& p){
@@ -42,7 +55,7 @@ NetWrap::send(Packet& p){
 
 
 NetWrap::~NetWrap(){
-	close(socket_dsc);
+	if(socket_dsc > 0)
+		close(socket_dsc);
 	socket_dsc = -1;
-	link_created = false;
 };

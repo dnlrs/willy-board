@@ -62,6 +62,10 @@ public:
    		return this->hash < p.hash;
 	}
 
+	int get_timestamp(){
+		return timestamp;
+	}
+
 	int get_packet_size(){
 		return 5*sizeof(int) + (ssid_length+MD5_HASH_LENGTH+MAC_LENGTH)*sizeof(char);
 	}

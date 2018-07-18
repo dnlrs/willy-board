@@ -1,9 +1,5 @@
 #include "Timeline.h"
 
-Timeline::Timeline(){
-	this->start = clock();
-}
-
 /*
 double
 Timeline::now(){
@@ -41,8 +37,9 @@ Timeline::sync_time(void)
     while(timeinfo.tm_year < (2016 - 1900) && ++retry < retry_count) {
         //printf("Waiting for system time to be set... (%d/%d)", retry, retry_count);
         vTaskDelay(2000 / portTICK_PERIOD_MS);
-        time(&now);
-        localtime_r(&now, &timeinfo);
+        time(&central_clock);
+        start_offset = clock();
+        localtime_r(&central_clock, &timeinfo);
     }
 
 }
@@ -61,13 +58,12 @@ Timeline::print_time()
     char strftime_buf[64];
 
     // Set timezone to Eastern Standard Time and print local time
-    setenv("TZ", "EST5EDT,M3.2.0/2,M11.1.0", 1);
+    setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1); //rome
     tzset();
     {
     	lock_guard<mutex> lg(m);
-   		localtime_r(&now, &timeinfo);
+   		localtime_r(&central_clock, &timeinfo);
     }
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
-    printf("NY TIME: %s", strftime_buf);
-
+    printf("ROME/ITALY: %s", strftime_buf);
 }

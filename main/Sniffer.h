@@ -8,6 +8,7 @@
 #include "esp_system.h"
 #include "esp_task_wdt.h"
 #include <iostream>
+#include "apps/sntp/sntp_opts.h"
 #include "NetWrap.h"
 #include "PacketContainer.h"
 
@@ -18,6 +19,7 @@
 
 #define TASK_RESET_PERIOD_S     		2 //seconds
 #define STACK_SIZE 						4096
+#define TIME_REFRESH_RATE				SNTP_UPDATE_DELAY / 1000 //seconds
 
 #define DEFAULT_SERVER_IP 				"192.168.1.4"
 #define DEFAULT_SERVER_PORT 			27015

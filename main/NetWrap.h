@@ -16,7 +16,6 @@ using namespace std;
 
 class NetWrap{
 	int socket_dsc;
-	bool link_created;
 
 	struct sockaddr_in serverAddress;
 
@@ -25,6 +24,7 @@ public:
 	NetWrap(const char *server_ip, unsigned server_port);
 
 	bool connect();
+	bool disconnect();
 
 	int get_descriptor(){ return socket_dsc; }
 	bool send(Packet& p);
