@@ -118,6 +118,9 @@ NetWrap.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/NetWrap.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
@@ -368,6 +371,12 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
+
+C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi.h:
 

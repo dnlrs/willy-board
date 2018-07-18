@@ -92,7 +92,10 @@ PacketContainer.o: \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
- C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h:
 
@@ -279,4 +282,10 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
+
+C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h:
 /home/manue/esp/wifi_watchdog_board/main/./PacketContainer.cpp:

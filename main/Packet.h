@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "Timeline.h"
+#include "md5.h"
 
 #define MAC_LENGTH 6
 #define MAX_SSID_LENGTH 32

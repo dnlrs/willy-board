@@ -1,10 +1,33 @@
 Packet.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.cpp \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/_default_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/features.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdio.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/newlib.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/config.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
+ C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/reent.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/_types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/lock.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/assert.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdlib.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/assert.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_interface.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/string.h \
@@ -12,6 +35,12 @@ Packet.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
@@ -53,6 +82,8 @@ Packet.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/errno.h \
+ C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/errno.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -86,19 +117,67 @@ Packet.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h \
+ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Packet.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdint.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/_default_types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/features.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_intsup.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/rom/queue.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/cdefs.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_err.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdio.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/newlib.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/config.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/ieeefp.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/reent.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/_ansi.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/_types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/_types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/lock.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/types.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/assert.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/build/include/sdkconfig.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/stdlib.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/stdlib.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/alloca.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -113,6 +192,18 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/time.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/time.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/machine/time.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/time.h:
 
@@ -196,6 +287,10 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/errno.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/newlib/include/sys/errno.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
@@ -261,6 +356,10 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Timeline.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/md5.h:
 /home/manue/esp/wifi_watchdog_board/main/./Packet.cpp:

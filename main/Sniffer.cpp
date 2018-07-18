@@ -1,8 +1,13 @@
 #include "Sniffer.h"
+#include "Timeline.h"
 
 using namespace std;
 
+Timeline *system_timeline = NULL;
+
+
 Sniffer::Sniffer(): sniffer_handle(NULL), sender_handle(NULL) {
+	system_timeline = new Timeline();
 
 	TaskHandle_t sender_handle;
 	xTaskCreatePinnedToCore(Sniffer::sender_task,"sender", STACK_SIZE, NULL, 2, &sender_handle, 1);
@@ -53,6 +58,11 @@ Sniffer::sender_task(void *pvParameters){
 
     NetWrap net_handler(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
     net_handler.connect();
+
+    
+    system_timeline->initialize_sntp();
+    system_timeline->sync_time();
+    system_timeline->print_time();
 
     gpio_pad_select_gpio((gpio_num_t)BLINK_GPIO);
     gpio_set_direction((gpio_num_t)BLINK_GPIO, GPIO_MODE_OUTPUT);

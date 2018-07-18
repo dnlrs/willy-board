@@ -2,16 +2,7 @@
  * PACKET cpp
  */
 
-#include <cstdio>
-#include <cstdlib>
-#include <set>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <errno.h>
 #include "Packet.h"
-#include "Timeline.h"
-#include "md5.h"
 
 #define PROBE_REQ_ID 0x40
 #define MAC_LENGTH 6
@@ -32,7 +23,7 @@ Packet::fetchData(void *buff, Timeline *time_offset){
 	
 	sequence_ctrl = static_cast<int>(hdr->sequence_ctrl);
 	rssi = static_cast<int>(pkt_ctrl.rssi);
-	timestamp = 0;
+	timestamp = system_timeline->get_time();
 	channel = static_cast<int>(pkt_ctrl.channel);
 
 	int i,j;
