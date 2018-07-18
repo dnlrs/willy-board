@@ -21,7 +21,8 @@
 #define STACK_SIZE 						4096
 #define TIME_REFRESH_RATE				SNTP_UPDATE_DELAY / 1000 //seconds
 
-#define DEFAULT_SERVER_IP 				"192.168.1.4"
+//#define DEFAULT_SERVER_IP 				"192.168.1.4"
+#define DEFAULT_SERVER_IP				"192.168.43.59"
 #define DEFAULT_SERVER_PORT 			27015
 
 #define BLINK_GPIO 						2

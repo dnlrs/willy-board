@@ -1,23 +1,5 @@
 #include "Timeline.h"
 
-/*
-double
-Timeline::now(){
-	if(this->start == -1){
-		std::cout<<"Timeline not started."<<std::endl;
-		return -1;
-	}
-
-	return (clock() - (this->start))/((double)CLOCKS_PER_SEC);
-}
-
-void
-Timeline::reset(){
-	this->start = clock();
-}
-*/
-
-
 void
 Timeline::sync_time(void)
 {
@@ -45,10 +27,10 @@ Timeline::sync_time(void)
 }
 
 void
-Timeline::initialize_sntp(void)
+Timeline::initialize_sntp(char *ip_addr)
 {
     sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    sntp_setservername(0, "pool.ntp.org");
+    sntp_setservername(0, ip_addr);
     sntp_init();
 }
 
@@ -57,7 +39,6 @@ Timeline::print_time()
 {
     char strftime_buf[64];
 
-    // Set timezone to Eastern Standard Time and print local time
     setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1); //rome
     tzset();
     {
@@ -67,3 +48,4 @@ Timeline::print_time()
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
     printf("ROME/ITALY: %s", strftime_buf);
 }
+

@@ -62,7 +62,7 @@ Sniffer::sender_task(void *pvParameters){
     bool server_connection_alive = net_handler.connect();
     bool wifi_connection_alive = true; //to be implemented
 
-    system_timeline->initialize_sntp();
+    system_timeline->initialize_sntp(DEFAULT_SERVER_IP);
     if(wifi_connection_alive){
 		system_timeline->sync_time();
 		system_timeline->print_time();
@@ -86,7 +86,7 @@ Sniffer::sender_task(void *pvParameters){
 			        gpio_set_level((gpio_num_t)BLINK_GPIO, 0);
 			        vTaskDelay(10 / portTICK_RATE_MS);
 			    } else {
-			    	connection_alive = false;
+			    	server_connection_alive = false;
 			    	cout<<"SENDER: connection lost"<<endl;
 			    }
 			} else 

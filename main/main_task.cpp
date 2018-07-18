@@ -1,3 +1,7 @@
+#include "sdkconfig.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
 #include <thread>
 #include "Sniffer.h"
 #include "PacketContainer.h"
@@ -5,10 +9,10 @@
 
 //SOME WIFI PASSWORDS ;)
 
-//#define SSID "HUAWEI_MS_NET"
-//#define PASSPHRASE "pdsproject"
-#define SSID "Vodafone-54858256"
-#define PASSPHRASE "_Qu4nt03bu0n4l4cqu4_"
+#define SSID "HUAWEI_MS_NET"
+#define PASSPHRASE "pdsproject"
+//#define SSID "Vodafone-54858256"
+//#define PASSPHRASE "_Qu4nt03bu0n4l4cqu4_"
 //#define SSID "Tinkywinky"
 //#define PASSPHRASE "1234554321AEEM@"
 //#define SSID "Vodafone-58171850"
@@ -33,5 +37,9 @@ void app_main(void)
 	wifi_handler->wait_connection();
 
 	Sniffer sniffer;
+
+	char ptrTaskList[250];
+	vTaskList(ptrTaskList);
+	cout<<ptrTaskList<<endl;
 
 }
