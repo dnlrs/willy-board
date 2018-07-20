@@ -48,7 +48,7 @@ class Packet{
 	std::string genHash();
 public:
 
-	Packet() {};
+	Packet() { hash = "test packet"; };
 	Packet(string s): hash(s) { };
 
 	string temp_print(){

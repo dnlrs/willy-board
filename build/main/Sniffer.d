@@ -119,6 +119,8 @@ Sniffer.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Sniffer.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/NetWrap.h \
@@ -135,7 +137,8 @@ Sniffer.o: C:/msys32/home/manue/esp/wifi_watchdog_board/main/Sniffer.cpp \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_event_loop.h \
  C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h \
- C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h \
+ C:/msys32/home/manue/esp/wifi_watchdog_board/main/WiFi.h
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/Sniffer.h:
 
@@ -377,6 +380,10 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
 
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
+
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
@@ -410,4 +417,6 @@ C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
 C:/msys32/home/manue/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
 C:/msys32/home/manue/esp/wifi_watchdog_board/main/PacketContainer.h:
+
+C:/msys32/home/manue/esp/wifi_watchdog_board/main/WiFi.h:
 /home/manue/esp/wifi_watchdog_board/main/./Sniffer.cpp:

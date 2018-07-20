@@ -35,8 +35,8 @@ public:
 		connected_flag.notify_all();
 	}
 
-	void connect();
-	void disconnect();
+	void enable();
+	void disable();
 	static esp_err_t event_handler(void *ctx, system_event_t *event);
 };
 

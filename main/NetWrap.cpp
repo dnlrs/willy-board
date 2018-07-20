@@ -7,7 +7,8 @@ NetWrap::NetWrap(const char *server_ip, unsigned server_port){
 	inet_pton(AF_INET, server_ip, &serverAddress.sin_addr.s_addr);
 	serverAddress.sin_port = htons(server_port);
 
-	socket_dsc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	
+    socket_dsc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if(socket_dsc < 0)
 		printf("socket error. errno: %s\n",strerror(errno));
 	

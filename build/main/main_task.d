@@ -114,6 +114,8 @@ main_task.o: \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
  C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
  C:/msys32/home/manue/esp/wifi_watchdog_board/main/NetWrap.h \
@@ -360,6 +362,10 @@ C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
 C:/msys32/home/manue/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log.h:
+
+C:/msys32/home/manue/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/manue/esp/esp-idf/components/esp32/include/esp_task_wdt.h:
 

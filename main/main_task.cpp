@@ -18,6 +18,13 @@
 //#define SSID "Vodafone-58171850"
 //#define PASSPHRASE "48fc7l97fld67hp"
 
+//#define DEFAULT_SERVER_IP 			"192.168.1.4"
+#define DEFAULT_SERVER_IP				"192.168.43.59"
+//#define DEFAULT_SERVER_IP				"192.168.1.100"
+#define DEFAULT_SERVER_PORT 			27015
+
+#define PACKET_QUEUE_MAX_SIZE			128
+
 using namespace std;
 
 extern "C" {
@@ -31,15 +38,11 @@ void app_main(void)
 {
 	std::cout<<"probe request watchdog starting..."<<std::endl;
 
-	packet_queue = new PacketContainer(10);
+	packet_queue = new PacketContainer(PACKET_QUEUE_MAX_SIZE);
 	wifi_handler = new WiFi(SSID,PASSPHRASE);
 
 	wifi_handler->wait_connection();
 
-	Sniffer sniffer;
-
-	char ptrTaskList[250];
-	vTaskList(ptrTaskList);
-	cout<<ptrTaskList<<endl;
-
+	Sniffer sniffer(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
+	sniffer.start(); //infinite loop inside
 }

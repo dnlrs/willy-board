@@ -27,15 +27,15 @@ WiFi::WiFi(const string& ssid,const string& passphrase){
 }
 
 void
-WiFi::connect(){
-	std::cout<<"wifi connect called."<<std::endl;
+WiFi::enable(){
+	std::cout<<"wifi enable called."<<std::endl;
     ESP_ERROR_CHECK( esp_wifi_connect() );
 }
 
 
 void
-WiFi::disconnect(){
-	std::cout<<"wifi disconnect called."<<std::endl;
+WiFi::disable(){
+	std::cout<<"wifi disable called."<<std::endl;
     
     ESP_ERROR_CHECK( esp_wifi_disconnect() );
 }

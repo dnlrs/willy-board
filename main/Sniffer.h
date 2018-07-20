@@ -6,8 +6,10 @@
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
 #include "esp_system.h"
+#include "esp_log.h"
 #include "esp_task_wdt.h"
 #include <iostream>
+#include <thread>
 #include "apps/sntp/sntp_opts.h"
 #include "NetWrap.h"
 #include "PacketContainer.h"
@@ -21,23 +23,34 @@
 #define STACK_SIZE 						4096
 #define TIME_REFRESH_RATE				SNTP_UPDATE_DELAY / 1000 //seconds
 
-//#define DEFAULT_SERVER_IP 				"192.168.1.4"
-#define DEFAULT_SERVER_IP				"192.168.43.59"
-#define DEFAULT_SERVER_PORT 			27015
+#define SERVER_CONNECTION_ATTEMPTS		10
+
+//#define DEFAULT_SERVER_IP 			"192.168.1.4"
+//#define DEFAULT_SERVER_IP				"192.168.43.59"
+//#define DEFAULT_SERVER_IP				"192.168.1.108"
+//#define DEFAULT_SERVER_PORT 			27015
 
 #define BLINK_GPIO 						2
 
+struct server_info_t{
+	string ip;
+	int port;
+};
 
 class Sniffer {
-	TaskHandle_t sniffer_handle; //rtos thread handler
-	TaskHandle_t sender_handle;
+	server_info_t server_addr;
+public:
+	Sniffer(const string& ip_addr, const int& port){
+		server_addr = {};
+		server_addr.ip = ip_addr;
+		server_addr.port = port;
+	}
+	~Sniffer();
+
+	void start();
 
 	static void sniffer_task(void *pvParameters);
 	static void sender_task(void *pvParameters);
-public:
-
-	Sniffer();
-	~Sniffer();
 
 	static void incoming_packet_cb(void* buff, wifi_promiscuous_pkt_type_t type);
 };
