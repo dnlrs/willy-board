@@ -63,6 +63,11 @@ Sniffer::sender_task(void *pvParameters){
     //wifi problems can be detected only when trying many times to connect to the server without success
     //or by handling errno "host unreachable"
 
+    if(net_handler.wait_start())
+    	ESP_LOGI(TAG, "start received");
+    else
+    	ESP_LOGI(TAG, "error -> start NOT received");
+
     //CLOCK SYNC initialization
     system_timeline->initialize_sntp(const_cast<char *>((server_addr->ip).c_str())); 
     if(wifi_connection_alive){

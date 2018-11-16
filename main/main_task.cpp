@@ -9,17 +9,19 @@
 
 //SOME WIFI PASSWORDS ;)
 
-#define SSID "HUAWEI_MS_NET"
-#define PASSPHRASE "pdsproject"
+//#define SSID "HUAWEI_MS_NET"
+//#define PASSPHRASE "pdsproject"
 //#define SSID "Vodafone-54858256"
 //#define PASSPHRASE "_Qu4nt03bu0n4l4cqu4_"
+#define SSID "MOVISTAR_95E3"
+#define PASSPHRASE "fhTPt59AumaJ34hEaenA"
 //#define SSID "Tinkywinky"
 //#define PASSPHRASE "1234554321AEEM@"
 //#define SSID "Vodafone-58171850"
 //#define PASSPHRASE "48fc7l97fld67hp"
 
-//#define DEFAULT_SERVER_IP 			"192.168.1.4"
-#define DEFAULT_SERVER_IP				"192.168.43.59"
+#define DEFAULT_SERVER_IP 				"192.168.1.34"
+//#define DEFAULT_SERVER_IP				"192.168.43.59"
 //#define DEFAULT_SERVER_IP				"192.168.1.100"
 #define DEFAULT_SERVER_PORT 			27015
 

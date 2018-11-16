@@ -45,8 +45,15 @@ bool
 NetWrap::send(Packet& p){
 	char buf[512];
 	p.serialize(buf);
+	int w_check;
+	int packet_size = p.get_packet_size();
+	w_check = write(socket_dsc,&packet_size,sizeof(int));
+	if(w_check <= 0){
+		cout<<"write error. errno: "<<strerror(errno)<<endl;
+		return false;
+	}
 
-	int w_check = write(socket_dsc,buf,p.get_packet_size());
+	w_check = write(socket_dsc,buf,packet_size);
 	if(w_check <= 0){
 		cout<<"write error. errno: "<<strerror(errno)<<endl;
 		return false;
@@ -60,3 +67,14 @@ NetWrap::~NetWrap(){
 		close(socket_dsc);
 	socket_dsc = -1;
 };
+
+bool NetWrap::wait_start(){
+	int r_check;
+	int a;
+	r_check = read(socket_dsc, &a, sizeof(int));
+	if(r_check <= 0){
+		cout<<"read error. errno: "<<strerror(errno)<<endl;
+		return false;
+	}
+	return true;
+}

@@ -29,6 +29,8 @@ public:
 	int get_descriptor(){ return socket_dsc; }
 	bool send(Packet& p);
 
+	bool wait_start(); //start is sent by server
+
 	~NetWrap();
 };
 
