@@ -46,14 +46,14 @@ NetWrap::send(Packet& p){
 	char buf[512];
 	p.serialize(buf);
 	int w_check;
-	int packet_size = p.get_packet_size();
+	int packet_size = htonl(p.get_packet_size());
 	w_check = write(socket_dsc,&packet_size,sizeof(int));
 	if(w_check <= 0){
 		cout<<"write error. errno: "<<strerror(errno)<<endl;
 		return false;
 	}
 
-	w_check = write(socket_dsc,buf,packet_size);
+	w_check = write(socket_dsc,buf,ntohl(packet_size));
 	if(w_check <= 0){
 		cout<<"write error. errno: "<<strerror(errno)<<endl;
 		return false;
