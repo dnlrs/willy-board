@@ -1,79 +1,82 @@
+#ifndef PACKETCONTAINER_H_INCLUDED
+#define PACKETCONTAINER_H_INCLUDED
 #pragma once
 
-#include <queue>
-#include <mutex>
 #include <condition_variable>
+#include <mutex>
+#include <queue>
+
 #include "Packet.h"
 
-#define CONTAINER_MAX_SIZE 10
+using std::condition_variable;
+using std::mutex;
+using std::queue;
+using std::unique_lock;
 
-using namespace std;
+class PacketContainer {
+    mutex m;
+    queue<Packet> q;
+    int max_size;
 
+    condition_variable empty_queue;
+    condition_variable full_queue;
 
-class PacketContainer{
-	mutex m;
-	queue<Packet> q;
-	int max_size;
-	int size;
-
-	condition_variable empty_queue;
-	condition_variable full_queue;
+    static constexpr char const* tag = "wwb-PacketContainer";
 
 public:
+    PacketContainer(const int max_size) : max_size(max_size){};
+    ~PacketContainer(){};
 
-	PacketContainer(const int max_size): max_size(max_size), size(0) {};
-	~PacketContainer(){};
+    void push(Packet& p)
+    {
+        unique_lock<mutex> ul(m);
+        full_queue.wait(ul, [this]() { return (q.size() < max_size); });
+        q.push(p);
+        empty_queue.notify_all();
+    };
 
-	void push(Packet& p){
-		unique_lock<mutex> ul(m);
-		full_queue.wait(ul,[this](){ return q.empty()||(size < max_size); });
-		if(size < max_size){
-			q.push(p);
-			size++;
-		}
-		empty_queue.notify_all();
-	};
+    bool timed_push(Packet& p, const int max_delay)
+    {
+        unique_lock<mutex> ul(m);
+        auto status =
+            full_queue.wait_for(ul, chrono::seconds(max_delay),
+                                [this]() { return (q.size() < max_size); });
+        if (status == true) {
+            q.push(p);
+            empty_queue.notify_all();
+            return true;
+        }
 
-	bool timed_push(Packet& p, const int max_delay){
-		unique_lock<mutex> ul(m);
-		auto status = full_queue.wait_for(ul,chrono::seconds(max_delay),[this](){ return q.empty()||(size < max_size); });
-		if(status == true){
-			if(size < max_size){
-				q.push(p);
-				size++;
-				empty_queue.notify_all();
-				return true;
-			}
-		} else 
-			cout<<"full queue timeout"<<endl;
+        ESP_LOGI(tag, "Full queue timeout");
+        return false;
+    }
 
-		return false;
-	}
+    void pop(Packet& store)
+    {
+        unique_lock<mutex> ul(m);
+        empty_queue.wait(ul, [this]() { return (q.size() > 0); });
+        store = q.front();
+        q.pop();
+        full_queue.notify_all();
+    }
 
-	void pop(Packet& store){
-		unique_lock<mutex> ul(m);
-		empty_queue.wait(ul,[this](){ return !q.empty(); });
-		store = q.front();
-		q.pop();
-		size--;
-		full_queue.notify_all();
-	}
+    bool timed_pop(Packet& store, const int max_delay)
+    {
+        unique_lock<mutex> ul(m);
+        auto status = empty_queue.wait_for(ul, chrono::seconds(max_delay),
+                                           [this]() { return (q.size() > 0); });
+        if (status == true) {
+            store = q.front();
+            q.pop();
+            full_queue.notify_all();
+            return true;
+        }
 
-	bool timed_pop(Packet& store, const int max_delay){
-		unique_lock<mutex> ul(m);
-		auto status = empty_queue.wait_for(ul,chrono::seconds(max_delay),[this](){ return !q.empty(); });
-		if(status == true){
-			store = q.front();
-			q.pop();
-			size--;
-			full_queue.notify_all();
-			return true;
-		} else 
-			cout<<"full queue timeout"<<endl;
-		
-		return false;
-	}
+        ESP_LOGI(tag, "Full queue timed out");
+        return false;
+    }
 };
 
+extern PacketContainer* packet_queue;
 
-extern PacketContainer *packet_queue;
+#endif // !PACKETCONTAINER_H_INCLUDED
