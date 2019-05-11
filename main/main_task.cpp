@@ -1,50 +1,50 @@
 #include "sdkconfig.h"
+
+#include "esp_event.h"
+#include "esp_event_loop.h"
+#include "esp_log.h"
+#include "esp_system.h"
+
+#include "freertos/event_groups.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_system.h"
-#include <thread>
-#include "Sniffer.h"
+
 #include "PacketContainer.h"
+#include "Sniffer.h"
 #include "WiFi.h"
 
-//SOME WIFI PASSWORDS ;)
+// SOME WIFI PASSWORDS ;)
 
-//#define SSID "HUAWEI_MS_NET"
-//#define PASSPHRASE "pdsproject"
-//#define SSID "Vodafone-54858256"
-//#define PASSPHRASE "_Qu4nt03bu0n4l4cqu4_"
-#define SSID "MOVISTAR_95E3"
-#define PASSPHRASE "fhTPt59AumaJ34hEaenA"
-//#define SSID "Tinkywinky"
-//#define PASSPHRASE "1234554321AEEM@"
-//#define SSID "Vodafone-58171850"
-//#define PASSPHRASE "48fc7l97fld67hp"
+#define DEFAULT_SERVER_IP "192.168.1.109"
+#define DEFAULT_SERVER_PORT 27015
 
-#define DEFAULT_SERVER_IP 				"192.168.1.34"
-//#define DEFAULT_SERVER_IP				"192.168.43.59"
-//#define DEFAULT_SERVER_IP				"192.168.1.100"
-#define DEFAULT_SERVER_PORT 			27015
+#define PACKET_QUEUE_MAX_SIZE 128
 
-#define PACKET_QUEUE_MAX_SIZE			128
-
-using namespace std;
+static constexpr char const* tag = "wwb";
 
 extern "C" {
-	void app_main(void);
+void app_main(void);
 }
 
-PacketContainer *packet_queue;
-WiFi *wifi_handler;
+static EventGroupHandle_t sync_group;
+static const int wifi_connected   = BIT0;
+static const int server_connected = BIT1;
 
-void app_main(void)
+PacketContainer* packet_queue = nullptr;
+WiFi* wifi_handler            = nullptr;
+
+void
+app_main(void)
 {
-	std::cout<<"probe request watchdog starting..."<<std::endl;
+    ESP_LOGI(tag, "Probe request watchdog starting...");
 
-	packet_queue = new PacketContainer(PACKET_QUEUE_MAX_SIZE);
-	wifi_handler = new WiFi(SSID,PASSPHRASE);
+    sync_group = xEventGroupCreate();
 
-	wifi_handler->wait_connection();
+    packet_queue = new PacketContainer(PACKET_QUEUE_MAX_SIZE);
+    wifi_handler = new WiFi();
 
-	Sniffer sniffer(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
-	sniffer.start(); //infinite loop inside
+    wifi_handler->wait_connection();
+
+    Sniffer sniffer(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
+    sniffer.start(); // infinite loop inside
 }
