@@ -1,0 +1,31 @@
+menu "WiFi Watchdog Board"
+
+config WIFI_SSID
+    string "Wifi Network Name"
+    default ""
+    help
+        WiFi Network name
+
+config WIFI_PSW
+    string "Wifi Passowrd"
+    default ""
+    help 
+        WiFi Network password
+    
+config SERVER_PORT
+    int "Server listening port"
+    range 49152 65535
+    default 57015
+    help
+        The server will be listening to this port for TCP 
+        connections from anchors
+    
+config DISCOVERY_PORT
+    int "UDP Discovery Port"
+    range 49152 65535
+    default 57016
+    help
+        The server will advertise its IP through broadcast
+        UDP messages to this port
+    
+endmenu
