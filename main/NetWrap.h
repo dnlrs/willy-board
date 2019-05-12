@@ -2,11 +2,14 @@
 #define NETWRAP_H_INCLUDED
 #pragma once
 
+#include "sdkconfig.h"
+
 #include "esp_event.h"
 #include "esp_event_loop.h"
 #include "esp_log.h"
 
 #include "freertos/FreeRTOS.h"
+#include "freertos/event_groups.h"
 #include "freertos/task.h"
 
 #include "lwip/err.h"
@@ -16,24 +19,26 @@
 
 #include "nvs_flash.h"
 
-#include <condition_variable>
-#include <mutex>
+#include "sys/select.h"
+#include "sys/errno.h"
 
 #include "Packet.h"
-#include "WiFi.h"
 
-using std::condition_variable;
-using std::lock_guard;
-using std::mutex;
-
-#define TASK_STACK_SIZE 4096
-#define TASK_PRIORITY 2
+#define NETW_TASK_STACK_SIZE 4096
+#define NETW_TASK_PRIORITY 2
+#define NETW_TASK_RUNNING_CORE 0
 
 #define INVALID_SOCKET -1
 
-class NetWrap {
-    int socket_dsc;
+extern EventGroupHandle_t sync_group;
+extern const int wifi_connected_bit;
+extern const int server_connected_bit;
+extern const int wifi_reset_bit;
+extern const int reboot_bit;    
 
+extern uint8_t esp_mac[6];
+
+class NetWrap {
     // socket ids
     int udp_socket = INVALID_SOCKET;
     int tcp_socket = INVALID_SOCKET;
@@ -42,15 +47,6 @@ class NetWrap {
     uint32_t server_ip   = 0;
     uint16_t server_port = 0;
 
-    struct sockaddr_in serverAddress;
-
-    // server connection status
-    bool server_connected = false;
-
-    // sync tools
-    mutex m;
-    condition_variable connected_flag;
-
     // task handle
     TaskHandle_t task_handle = nullptr;
 
@@ -58,16 +54,6 @@ class NetWrap {
     static constexpr char const* tag = "wwb-NetWrap";
 
 private:
-    void set_server_connected(bool is_connected)
-    {
-        unique_lock<mutex> ul(m);
-        server_connected = is_connected;
-
-        // if server is connected notify all waiting threads
-        if (server_connected)
-            connected_flag.notify_all();
-    }
-
     void init();
 
     bool listen_udp_adverts();
@@ -76,26 +62,20 @@ private:
     bool is_connection_broken();
     void close_connection(int socket);
 
-public:
-    NetWrap(unsigned server_port);
-    NetWrap(const char* server_ip, unsigned server_port);
+    /* converts server ip to string */
+    bool get_server_ip_str(char* ip_addr, int ip_addr_size);
 
-    void wait_connection()
-    {
-        unique_lock<mutex> ul(m);
-        connected_flag.wait(ul, [this]() { return server_connected; });
-    }
+    bool send_n(int sock, const void* dataptr, size_t size);
 
-    bool send_packet(Packet& p);
-
-    bool connect();
-    bool disconnect();
-
-    int get_descriptor() { return socket_dsc; }
+    bool send_mac_address();
 
     static void netwrap_task(void* pvParameters);
 
+public:
+    NetWrap();
     ~NetWrap();
+
+    bool send_packet(Packet& p);
 };
 
 #endif // !NETWRAP_H_INCLUDED
