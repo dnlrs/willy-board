@@ -4,8 +4,6 @@
 
 #include "sdkconfig.h"
 
-#include "apps/sntp/sntp_opts.h"
-
 #include "esp_log.h"
 #include "esp_system.h"
 #include "esp_task_wdt.h"
@@ -16,54 +14,42 @@
 #include "freertos/task.h"
 
 #include "NetWrap.h"
-#include "PacketContainer.h"
-#include "Timeline.h"
 #include "WiFi.h"
 
-#include <iostream>
-#include <thread>
+#define SNIF_TASK_STACK_SIZE 4096
+#define SNIF_TASK_PRIORITY 2
+#define SNIF_TASK_RUNNING_CORE 1
 
-using std::string;
-
-#define WIFI_CHANNEL_MAX             13 // according to EU standard
-#define WIFI_CHANNEL_SWITCH_INTERVAL 500
-
-#define PROBE_REQ_ID 0x40
-#define MAC_LENGTH   6    // bytes
-
-#define TASK_RESET_PERIOD_S 2    // seconds
-#define STACK_SIZE          4096
-
-#define TIME_REFRESH_RATE (SNTP_UPDATE_DELAY / 1000) // seconds
-
-#define SERVER_CONNECTION_ATTEMPTS 10
-
+// blinking led when sending packet
 #define BLINK_GPIO 2
 
-Timeline* system_timeline = nullptr;
-
-struct server_info_t {
-    string ip;
-    int port;
-};
+// task synchronization
+extern EventGroupHandle_t sync_group;
+extern const int wifi_connected_bit;
+extern const int server_connected_bit;
+extern const int wifi_reset_bit;
+extern const int reboot_bit;    
 
 class Sniffer {
-    server_info_t server_addr;
+    // reference to network wrapper (has connection to server)
+    NetWrap& netw_ref;
+
+    // sender task handle
+    TaskHandle_t task_sender_handle = nullptr;
+
+    // logging tag
+    static constexpr char const* tag = "wwb-Sniffer";
+
+private:
+    void blink(int ms);
 
 public:
-    Sniffer(const string& ip_addr, const int& port)
-    {
-        server_addr      = {};
-        server_addr.ip   = ip_addr;
-        server_addr.port = port;
-    }
+    Sniffer(NetWrap& netwrap_reference);
     ~Sniffer();
 
     void start();
 
-    static void sniffer_task(void* pvParameters);
     static void sender_task(void* pvParameters);
-
     static void incoming_packet_cb(void* buff,
                                    wifi_promiscuous_pkt_type_t type);
 };

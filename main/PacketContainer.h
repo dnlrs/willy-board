@@ -8,23 +8,27 @@
 
 #include "Packet.h"
 
+#define PACKET_QUEUE_MAX_SIZE 512
+
 using std::condition_variable;
 using std::mutex;
 using std::queue;
 using std::unique_lock;
 
 class PacketContainer {
-    mutex m;
     queue<Packet> q;
-    int max_size;
+    int max_size = PACKET_QUEUE_MAX_SIZE;
 
+    // sync utils
+    mutex m;
     condition_variable empty_queue;
     condition_variable full_queue;
 
+    // logging tag
     static constexpr char const* tag = "wwb-PacketContainer";
 
 public:
-    PacketContainer(const int max_size) : max_size(max_size){};
+    PacketContainer() : max_size(PACKET_QUEUE_MAX_SIZE){};
     ~PacketContainer(){};
 
     void push(Packet& p)
@@ -76,7 +80,5 @@ public:
         return false;
     }
 };
-
-extern PacketContainer* packet_queue;
 
 #endif // !PACKETCONTAINER_H_INCLUDED
