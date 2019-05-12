@@ -28,4 +28,22 @@ config DISCOVERY_PORT
         The server will advertise its IP through broadcast
         UDP messages to this port
     
+config PACKET_DISCARD_TIME
+    int "Time after which packets received are discarded (ms)"
+    range 0 3600000
+    default 0
+    help
+        If the anchor is not connected to the server, packets
+        older than this time are automatically discarded.
+        If 0 packets are never discarded (unless anchor memory 
+        is full).
+
+config SNTP_SYNC_INTERVAL
+    int "SNTP protocol requests interval (ms)"
+    range 15000 3600000
+    default 30000
+    help
+        This interval defines the frequency with which the esp32
+        anchor synchronizes its clock with the SNTP server.
+        
 endmenu
