@@ -1,24 +1,20 @@
 #include "WiFi.h"
 
-#include "esp_log.h"
-#include "esp_system.h"
-#include "esp_wifi.h"
-#include "nvs_flash.h"
-
 #include <cstring>
 
 WiFi::WiFi()
 {
-    wifi_connected = false;
+    init();
+}
 
-    // initialize NVS
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES) {
-        ESP_ERROR_CHECK(nvs_flash_erase());
-        ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
+WiFi::~WiFi()
+{
+    deinit();
+}
 
+void
+WiFi::init()
+{
     // initialize the tcp stack
     tcpip_adapter_init();
 
@@ -31,29 +27,51 @@ WiFi::WiFi()
 
     wifi_config_t wifi_config = {};
     wifi_config.sta           = {};
-    strcpy((char*)wifi_config.sta.ssid, CONFIG_WIFI_SSID);
-    strcpy((char*)wifi_config.sta.password, CONFIG_WIFI_PSW);
+    strncpy((char*)wifi_config.sta.ssid, CONFIG_WIFI_SSID,
+            sizeof(wifi_config.sta.ssid));
+    strncpy((char*)wifi_config.sta.password, CONFIG_WIFI_PSW,
+            sizeof(wifi_config.sta.password));
 
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
 
-    ESP_LOGD(tag, "(wifi::ctor) wifi_init_sta finished.");
-    ESP_LOGI(tag, "Connect to AP. ssid: '%s' password: '%s'", 
+    ESP_LOGD(tag, "(init) wifi stack initialization finished.");
+    ESP_LOGI(tag, "(init) connecting to AP ssid: '%s' password: '%s'",
              CONFIG_WIFI_SSID, CONFIG_WIFI_PSW);
 }
 
 void
-WiFi::enable()
+WiFi::deinit()
 {
-    ESP_LOGD(tag, "wifi::enable called.");
+    disconnect();
+    // set as 'false' the promiscuous mode
+    ESP_ERROR_CHECK(esp_wifi_set_promiscuous(false));
+    // it stop soft-AP and free soft-AP control block
+    ESP_ERROR_CHECK(esp_wifi_stop());
+    // free all resource allocated in esp_wifi_init() and stop WiFi task
+    ESP_ERROR_CHECK(esp_wifi_deinit());
+}
+
+void
+WiFi::reset()
+{
+    deinit();
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    init();
+}
+
+void
+WiFi::connect()
+{
+    ESP_LOGD(tag, "(connect) connecting...");
     ESP_ERROR_CHECK(esp_wifi_connect());
 }
 
 void
-WiFi::disable()
+WiFi::disconnect()
 {
-    ESP_LOGD(tag, "wifi::disable called.");
+    ESP_LOGD(tag, "(disconnect) disconnecting...");
     ESP_ERROR_CHECK(esp_wifi_disconnect());
 }
 
@@ -62,22 +80,21 @@ WiFi::event_handler(void* ctx, system_event_t* event)
 {
     switch (event->event_id) {
     case SYSTEM_EVENT_STA_START:
-        ESP_LOGD(tag, "STA_START event");
         esp_wifi_connect();
         break;
 
     case SYSTEM_EVENT_STA_GOT_IP:
-        if (wifi_handler != nullptr) {
-            wifi_handler->set_wifi_connected(true);
-        }
-        ESP_LOGD(tag, "STA_GOT_IP event");
+        esp_wifi_get_mac(ESP_IF_WIFI_STA, esp_mac);
+        xEventGroupSetBits(sync_group, wifi_connected_bit);
+        ESP_LOGI(tag,
+                 "(event_handler) esp mac address is: "
+                 "%02x:%02x:%02x:%02x:%02x:%02x",
+                 esp_mac[0], esp_mac[1], esp_mac[2], 
+                 esp_mac[3], esp_mac[4], esp_mac[5]);
         break;
 
     case SYSTEM_EVENT_STA_DISCONNECTED:
-        if (wifi_handler != nullptr) {
-            wifi_handler->set_wifi_connected(false);
-        }
-        ESP_LOGD(tag, "STA_DISCONNECTED event");
+        xEventGroupClearBits(sync_group, wifi_connected_bit);
         esp_wifi_connect();
         break;
 
@@ -85,10 +102,4 @@ WiFi::event_handler(void* ctx, system_event_t* event)
         break;
     }
     return ESP_OK;
-}
-
-WiFi::~WiFi()
-{
-    esp_wifi_disconnect();
-    ESP_ERROR_CHECK(esp_wifi_stop());
 }

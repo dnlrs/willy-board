@@ -7,60 +7,40 @@
 #include "esp_err.h"
 #include "esp_event.h"
 #include "esp_event_loop.h"
+#include "esp_log.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
 
-#include <condition_variable>
-#include <mutex>
-#include <string>
-
-using std::condition_variable;
-using std::mutex;
-using std::string;
-using std::unique_lock;
+#include "freertos/FreeRTOS.h"
+#include "freertos/event_groups.h"
+#include "freertos/task.h"
 
 extern EventGroupHandle_t sync_group;
-extern const int wifi_connected;
-extern const int server_connected;
+extern const int wifi_connected_bit;
+extern const int server_connected_bit;
+
+extern uint8_t esp_mac[6];
 
 class WiFi {
-    // thread-shared status variable, initialized in 'WiFi.cpp'
-    bool wifi_connected = false;
-
-    // other threads subscribe to this cv in order
-    // to know when wifi is started successfully
-    condition_variable connected_flag;
-    mutex m;
-
     // logging tag
     static constexpr char const* tag = "wwb-WiFi";
 
 private:
-    void set_wifi_connected(bool is_connected)
-    {
-        unique_lock<mutex> ul(m);
-        wifi_connected = is_connected;
+    void init();
+    void deinit();
 
-        // if connected notify any waiting thread
-        if (wifi_connected)
-            connected_flag.notify_all();
-    }
+    void connect();
 
 public:
     WiFi();
     ~WiFi();
 
-    void wait_connection()
-    {
-        unique_lock<mutex> ul(m);
-        connected_flag.wait(ul, [this]() { return wifi_connected; });
-    }
+    // calls deinit(), waits a second and calls init()
+    void reset();
 
-    void enable();
-    void disable();
+    void disconnect();
 
     static esp_err_t event_handler(void* ctx, system_event_t* event);
 };
-
-// extern global handler for wifi
-extern WiFi* wifi_handler;
 
 #endif // !WIFI_H_INCLUDED
