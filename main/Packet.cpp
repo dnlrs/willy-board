@@ -313,8 +313,8 @@ Packet::fetch_vht_capabilities(wlan_vht_cap_t* src)
     return true;
 }
 
-void
-Packet::debug_print()
+string
+Packet::str()
 {   
     stringstream concat_data;
     concat_data << 
@@ -340,7 +340,7 @@ Packet::debug_print()
     // hash
     concat_data << "\n\t" << "hash: " << hash;
     
-    ESP_LOGD(tag, "%s", concat_data.str().c_str());
+    return concat_data.str();
 }
 
 std::string

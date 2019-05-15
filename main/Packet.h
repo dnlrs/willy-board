@@ -90,7 +90,7 @@ public:
 
     uint32_t serialize(char* buf);
 
-    void debug_print();
+    std::string str();
 };
 
 #endif

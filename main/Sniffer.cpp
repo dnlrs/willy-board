@@ -94,7 +94,7 @@ Sniffer::sender_task(void* pvParameters)
             continue;
         }
         snif_handle->blink(10);
-        packet.debug_print();
+        ESP_LOGV(tag, "(sender_task) sent packet %s", packet.str().c_str());
     }
 }
 
