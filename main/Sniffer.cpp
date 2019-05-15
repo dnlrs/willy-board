@@ -94,7 +94,7 @@ Sniffer::sender_task(void* pvParameters)
             continue;
         }
         snif_handle->blink(10);
-        // packet.debug_print();
+        packet.debug_print();
     }
 }
 
@@ -107,7 +107,7 @@ Sniffer::incoming_packet_cb(void* buff, wifi_promiscuous_pkt_type_t type)
     }
 
     Packet packet;
-    if (packet.fetchData(buff) == true) {
+    if (packet.fetch_probr(buff) == true) {
         // if queue is full, try to push for at most 5 seconds
         if (packet_queue->timed_push(packet, 5))
             ESP_LOGD(tag, "(incoming_packet_cb) packet pushed to queue.");

@@ -43,18 +43,17 @@ NetWrap::send_packet(Packet& packet)
     which the number requested to be sent.
 */
 {
-    char buf[512];
-    packet.serialize(buf);
-
-    uint32_t packet_size = htonl(packet.get_packet_size());
+    char buf[MAX_PACKET_SIZE];
+    uint32_t packet_len = packet.serialize(buf);
 
     /* sending packet size */
-    bool rval = send_n(tcp_socket, (char*)&(packet_size), 4);
+    uint32_t pkt_len_nbo = htonl(packet_len);
+    bool rval = send_n(tcp_socket, (char*)&(pkt_len_nbo), 4);
     if (rval == false)
         return false;
 
     /* sending actual packet */
-    rval = send_n(tcp_socket, buf, ntohl(packet_size));
+    rval = send_n(tcp_socket, buf, packet_len);
     if (rval == false)
         return false;
 
