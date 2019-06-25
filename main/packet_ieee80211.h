@@ -47,6 +47,9 @@ extern std::map<int, uint64_t>    sr_compacted;     // Assign to each data rate 
 bool add_tag(int element_id, uint32_t* tag_presence);
 bool is_tag_set(int element_id, uint32_t* tag_presence);
 
+/* manage supported rates */
+bool add_rate(int rate, uint64_t* supported_rates);
+
 
 /*
     Frame Control ($9.2.4.1)
@@ -134,7 +137,7 @@ typedef struct {
     HT Capabilities ($9.4.2.56) 
 */
 #define HT_MCSSET_LEN           16
-#define HT_CAPABILITIES_LEN    (2 + 1 + 16 + 2 + 4 + 1) // element header excluded
+#define HT_CAPABILITIES_LEN    (2 + 1 + HT_MCSSET_LEN + 2 + 4 + 1) // element header excluded
 
 typedef struct {
     element_hdr hdr;

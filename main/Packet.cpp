@@ -152,7 +152,7 @@ Packet::fetch_probr(void* buff)
             break;
         }
 
-        // jump element header and element itself
+        // jump element (header + body)
         current_position += (elm_hdr->length + 2);
     }
 
@@ -207,7 +207,7 @@ Packet::fetch_supported_rates(wlan_supported_rates_t* data)
             continue;
         }
 
-        supported_rates &= sr_compacted.at(data_rate);
+        add_rate(data_rate, &supported_rates);
     }
 
     ESP_LOGV(tag, "(fetch_supported_rates) element present");
@@ -229,7 +229,7 @@ Packet::fetch_ext_supported_rates(wlan_extended_sup_rates_t* data)
             continue;
         }
 
-        supported_rates &= sr_compacted.at(data_rate);
+        add_rate(data_rate, &supported_rates);
     }
 
     ESP_LOGV(tag, "(fetch_ext_supported_rates) element present");
@@ -323,7 +323,9 @@ Packet::str()
         "\n\t" << "timestamp: " << timestamp <<
         "\n\t" << "sequence control: " << sequence_control;
 
-    // mac        
+    /*
+        MAC
+    */        
     concat_data << "\n\t" << "mac: " << std::setw(2) << std::hex << (unsigned int) src_mac[0];
     concat_data << ":" << std::setw(2) << std::hex << (unsigned int) src_mac[1];
     concat_data << ":" << std::setw(2) << std::hex << (unsigned int) src_mac[2];
@@ -331,13 +333,69 @@ Packet::str()
     concat_data << ":" << std::setw(2) << std::hex << (unsigned int) src_mac[4];
     concat_data << ":" << std::setw(2) << std::hex << (unsigned int) src_mac[5];
     
-    // ssid list
+    /* 
+        fingerprint
+    */
+    concat_data << "\n\t" << "fingerprint: ";
+    
+    // Tags presence
+    uint8_t* src = (uint8_t*) &tag_presence;
+    for (int i = 0; i < 4; i++)
+        concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) *src++;
+    
+    concat_data << '|';
+
+    // Supported Rates
+    src = (uint8_t*) &supported_rates;
+    for (int i = 0; i < 8; i++)
+        concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) *src++;
+    
+    concat_data << '|';
+
+    // HT Capabilities
+    src = (uint8_t*) &(ht_capabilities.capability_info);
+    for (int i = 0 ; i < HT_CAPABILITIES_LEN; i++)
+        concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) *src++;
+    
+    concat_data << '|';
+
+    // Extended Capabilities
+    src = (uint8_t*) &(extended_capabilities.extended_capabilities);
+    for (int i = 0 ; i < EXT_CAPABILITIES_LEN; i++)
+        concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) *src++;
+    
+    concat_data << '|';
+    
+    // Interworking
+    concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) interworking;
+    
+    concat_data << '|';
+
+    // Multi Band
+    concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) multi_band_id;
+    concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) multi_band_channel;
+    
+    concat_data << '|';
+
+    // VHT Capabilities
+    src = (uint8_t*) &(vht_capabilities.capabilities_info);
+    for (int i = 0; i < VHT_CAPABILITIES_LEN; i++)
+        concat_data << std::setfill('0') << std::setw(2) << std::hex << (unsigned int) *src++;
+    
+    concat_data << '|';
+
+    /*
+        SSID List
+    */
     if (ssid_list.size() > 0) {
         concat_data << "\n\t" << "ssid_list:";
         for (int i = 0; i < ssid_list.size(); i++)
             concat_data << "\n\t\t[" << i << "]: " << ssid_list[i];
     }
-    // hash
+
+    /*
+        HASH
+    */
     concat_data << "\n\t" << "hash: " << hash;
     
     return concat_data.str();
@@ -368,25 +426,24 @@ Packet::genHash()
 uint32_t
 Packet::serialize(char* buf)
 /*
-    1. channel
-    2. rssi
-    3. timestamp
-    4. sequence control
-    5. number of ssid
-    6. tags presence
-    7. supported rates
-    8. HT capabilities
-    9. Extended Capabilities
-    10. Interworking
-    11. Multi Band
-    12. VHT Capabilities
-    13. device MAC address
-    14. ssid list (ref: 5.)
-    15. hash
+    Order:
+        1. channel
+        2. rssi
+        3. timestamp
+        4. sequence control
+        5. number of ssid
+        6. tags presence
+        7. supported rates
+        8. HT capabilities
+        9. Extended Capabilities
+        10. Interworking
+        11. Multi Band
+        12. VHT Capabilities
+        13. device MAC address
+        14. ssid list (ref: 5.)
+        15. hash
 */
 {
-    uint32_t rval = 0; // serialized packet size
-
     /* uint32_t* mode */
     uint32_t* p_buf = (uint32_t*) buf;
 
@@ -396,60 +453,52 @@ Packet::serialize(char* buf)
     p_buf[3] = htonl((uint32_t) sequence_control);   // sequence control
     p_buf[4] = htonl((uint32_t) ssid_list.size());   // number of SSIDs
 
-    p_buf[5] = htonl(tag_presence);                      // tags presence
-    p_buf[6] = htonl(((uint32_t*)&supported_rates)[0]);  // supported rates 1
-    p_buf[7] = htonl(((uint32_t*)&supported_rates)[1]);  // supported rates 2
-
-    rval += (8*sizeof(uint32_t)); 
+    p_buf[5] = htonl(tag_presence);                  // tags presence
 
     /* uint8_t* mode */
-    uint8_t* u8p_buf = (uint8_t*) &p_buf[8];
+    uint8_t* dst = (uint8_t*) &p_buf[6];
+    uint8_t* src = nullptr;
+
+    /* supported rates */
+    src = (uint8_t*) & supported_rates;
+    for (int i = 0; i < 8; i++)
+        *dst++ = *src++;
 
     /* ht capabilities */
     if (is_tag_set(TAG_HT_CAPABILITY, &tag_presence)) {
-
-        uint8_t* src = (uint8_t*) &ht_capabilities.capability_info;
+        src = (uint8_t*) &ht_capabilities.capability_info;
         for (int i = 0; i < HT_CAPABILITIES_LEN; i++)
-            *u8p_buf++ = *src++;
-
-        rval += HT_CAPABILITIES_LEN;
+            *dst++ = *src++;
     }
 
     /* extended capabilities */
     if (is_tag_set(TAG_EXTENDED_CAPABILITIES, &tag_presence)) {
-        uint8_t* src = (uint8_t*) &extended_capabilities.extended_capabilities;
+        src = (uint8_t*) &extended_capabilities.extended_capabilities;
         for (int i = 0; i < EXT_CAPABILITIES_LEN; i++)
-            *u8p_buf++ = *src++;
-
-        rval += EXT_CAPABILITIES_LEN;
+            *dst++ = *src++;
     }
 
     /* interworking */
     if (is_tag_set(TAG_INTERWORKING, &tag_presence)) {
-        *u8p_buf++ = interworking;
-        rval++;
+        *dst++ = interworking;
     }
 
     /* Multi Band */
     if (is_tag_set(TAG_MULTI_BAND, &tag_presence)) {
-        *u8p_buf++ = multi_band_id;
-        *u8p_buf++ = multi_band_channel;
-        rval += 2;
+        *dst++ = multi_band_id;
+        *dst++ = multi_band_channel;
     }
 
     /* VHT Capabilities */
     if (is_tag_set(TAG_VHT_CAPABILITY, &tag_presence)) {
-        uint8_t* src = (uint8_t*) &vht_capabilities.capabilities_info;
+        src = (uint8_t*) &vht_capabilities.capabilities_info;
         for (int i = 0; i < VHT_CAPABILITIES_LEN; i++)
-            *u8p_buf++ = *src++;
-
-        rval += VHT_CAPABILITIES_LEN;
+            *dst++ = *src++;
     }
 
     /* device mac */
     for (int i = 0; i < MAC_LENGTH; i++)
-        *u8p_buf++ = src_mac[i];
-    rval += MAC_LENGTH;
+        *dst++ = src_mac[i];
 
     /* 
         SSIDs 
@@ -458,19 +507,102 @@ Packet::serialize(char* buf)
     for (int i = 0; i < ssid_list.size(); i++) {
         uint8_t ssid_len = ssid_list[i].size();
 
-        *u8p_buf++ = ssid_len;
+        *dst++ = ssid_len;
         for (int j = 0; j < ssid_len; j++) {
-            *u8p_buf++ = ssid_list[i][j];
+            *dst++ = ssid_list[i][j];
         }            
-        rval += (1+ssid_len);
     }
 
     /* hash */
     for (int i = 0; i < MD5_HASH_LENGTH; i++) {
-        *u8p_buf++ = hash[i];
+        *dst++ = hash[i];
     }
-    rval += MD5_HASH_LENGTH;
 
+    // serialized packet size
+    uint32_t rval = (uint32_t) (dst - (uint8_t*) buf);
     ESP_LOGV(tag, "(serialize) serialized length %d (max %d)", rval, MAX_PACKET_SIZE);
+    return rval;
+}
+
+Packet 
+Packet::forge_test_packet()
+{   
+    Packet rval;
+    rval.channel = 0x11223344;
+    rval.rssi = -69;
+    rval.timestamp = 0x11223344;
+    rval.sequence_control = 0x1122;
+    rval.src_mac[0] = 0xaa;
+    rval.src_mac[1] = 0xbb;
+    rval.src_mac[2] = 0xcc;
+    rval.src_mac[3] = 0xdd;
+    rval.src_mac[4] = 0xee;
+    rval.src_mac[5] = 0xff;
+
+
+    add_tag(TAG_SSID, &rval.tag_presence);
+    add_tag(TAG_SSID_LIST, &rval.tag_presence);
+    rval.ssid_list.push_back(string("ssid test 1"));
+    rval.ssid_list.push_back(string("ssid test 2"));
+    rval.ssid_list.push_back(string("ssid test 3"));
+
+    add_tag(TAG_SUPP_RATES, &rval.tag_presence);
+    add_tag(TAG_EXT_SUPP_RATES, &rval.tag_presence);
+    rval.supported_rates = 0x1122334455667788;
+
+    add_tag(TAG_HT_CAPABILITY, &rval.tag_presence);
+    rval.ht_capabilities.capability_info = 0x1122;
+    rval.ht_capabilities.ampduparam = 0x11;
+    rval.ht_capabilities.mcsset[0] = 0x11;
+    rval.ht_capabilities.mcsset[1] = 0x22;
+    rval.ht_capabilities.mcsset[2] = 0x33;
+    rval.ht_capabilities.mcsset[3] = 0x44;
+    rval.ht_capabilities.mcsset[4] = 0x55;
+    rval.ht_capabilities.mcsset[5] = 0x66;
+    rval.ht_capabilities.mcsset[6] = 0x77;
+    rval.ht_capabilities.mcsset[7] = 0x88;
+    rval.ht_capabilities.mcsset[8] = 0x99;
+    rval.ht_capabilities.mcsset[9] = 0x00;
+    rval.ht_capabilities.mcsset[10] = 0xaa;
+    rval.ht_capabilities.mcsset[11] = 0xbb;
+    rval.ht_capabilities.mcsset[12] = 0xcc;
+    rval.ht_capabilities.mcsset[13] = 0xdd;
+    rval.ht_capabilities.mcsset[14] = 0xee;
+    rval.ht_capabilities.mcsset[15] = 0xff;
+    rval.ht_capabilities.extended_capabilities = 0x1122;
+    rval.ht_capabilities.tbc = 0x11223344;
+    rval.ht_capabilities.asel_capabilities = 0x11;
+
+    add_tag(TAG_EXTENDED_CAPABILITIES, &rval.tag_presence);
+    rval.extended_capabilities.extended_capabilities[0] = 0x11;
+    rval.extended_capabilities.extended_capabilities[1] = 0x22;
+    rval.extended_capabilities.extended_capabilities[2] = 0x33;
+    rval.extended_capabilities.extended_capabilities[3] = 0x44;
+    rval.extended_capabilities.extended_capabilities[4] = 0x55;
+    rval.extended_capabilities.extended_capabilities[5] = 0x66;
+    rval.extended_capabilities.extended_capabilities[6] = 0x77;
+    rval.extended_capabilities.extended_capabilities[7] = 0x88;
+    rval.extended_capabilities.extended_capabilities[8] = 0x99;
+
+    add_tag(TAG_INTERWORKING, &rval.tag_presence);
+    rval.interworking = 0x11;
+
+    add_tag(TAG_MULTI_BAND, &rval.tag_presence);
+    rval.multi_band_id = 0x11;
+    rval.multi_band_channel = 0x11;
+
+    add_tag(TAG_VHT_CAPABILITY, &rval.tag_presence);
+    rval.vht_capabilities.capabilities_info = 0x11223344;
+    rval.vht_capabilities.supported_mcs_nss_set[0] = 0x11;
+    rval.vht_capabilities.supported_mcs_nss_set[1] = 0x22;
+    rval.vht_capabilities.supported_mcs_nss_set[2] = 0x33;
+    rval.vht_capabilities.supported_mcs_nss_set[3] = 0x44;
+    rval.vht_capabilities.supported_mcs_nss_set[4] = 0x55;
+    rval.vht_capabilities.supported_mcs_nss_set[5] = 0x66;
+    rval.vht_capabilities.supported_mcs_nss_set[6] = 0x77;
+    rval.vht_capabilities.supported_mcs_nss_set[7] = 0x88;
+
+    rval.hash = rval.genHash();
+
     return rval;
 }

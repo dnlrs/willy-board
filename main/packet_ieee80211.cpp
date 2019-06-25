@@ -1,5 +1,7 @@
 #include "packet_ieee80211.h"
 
+#include "esp_log.h"
+
 #include <cinttypes>
 #include <map>
 #include <string>
@@ -137,9 +139,10 @@ std::map<int, uint64_t> sr_compacted = {
     { 0xC8, 0x0000000004000000 },
     { 0xE0, 0x0000000002000000 },
     { 0xEC, 0x0000000001000000 },
-    { 0xFF, 0xffffffffffffffff },
-    { 0,    0x0000000000000000 }
+    { 0xFF, 0x0000000000800000 },
+    { 0,    0x0000000000400000 }
 };
+
 
 
 bool
@@ -149,7 +152,7 @@ add_tag(int element_id, uint32_t* tag_presence)
         return false;
     }
 
-    *tag_presence &= tags_compacted.at(element_id);
+    *tag_presence |= tags_compacted.at(element_id);
     return true;
 }
 
@@ -163,43 +166,12 @@ is_tag_set(int element_id, uint32_t* tag_presence)
     return ((*tag_presence & tags_compacted.at(element_id)) != 0);
 }
 
-
-
-
-
-
-
-
-
-int deserialize_ht_capabilities(wlan_ht_t* data, uint8_t* src)
-{   
-    uint8_t* dst = (uint8_t*) &data->capability_info;
-
-    for (int i = 0; i < HT_CAPABILITIES_LEN; i++) {
-        *dst++ = *src++;
-    }
-
-    return HT_CAPABILITIES_LEN;
-}
-
-int deserialize_extended_capabilities(wlan_ext_cap_t* data, uint8_t* src)
+bool 
+add_rate(int rate, uint64_t* supported_rates)
 {
-    uint8_t* dst = (uint8_t*) &data->extended_capabilities;
-
-    for(int i = 0; i < EXT_CAPABILITIES_LEN; i++) {
-        *dst++ = *src++;
-    }
-
-    return EXT_CAPABILITIES_LEN;
-}
-
-int deserialize_vht_capabilities(wlan_vht_cap_t* data, uint8_t* src)
-{
-    uint8_t* dst = (uint8_t*) &data->capabilities_info;
-
-    for (int i = 0; i < VHT_CAPABILITIES_LEN; i++) {
-        *dst++ = *src++;
-    }
-
-    return VHT_CAPABILITIES_LEN;
+    if (sr_compacted.find(rate) == sr_compacted.end())
+        return false;
+    
+    *supported_rates |= sr_compacted.at(rate);
+    return true;
 }

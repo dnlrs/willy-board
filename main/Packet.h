@@ -65,6 +65,7 @@ class Packet {
     /* VHT Capabilities */
     wlan_vht_cap_t vht_capabilities;
 
+
     // logging tag
     static constexpr char const* tag = "wwb-Packet";
 
@@ -91,6 +92,8 @@ public:
     uint32_t serialize(char* buf);
 
     std::string str();
+
+    static Packet forge_test_packet();
 };
 
 #endif

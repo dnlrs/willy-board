@@ -87,6 +87,10 @@ Sniffer::sender_task(void* pvParameters)
             continue;
         }
 
+        // debug only
+        // TODO: remove
+        // packet = Packet::forge_test_packet();
+
         bool rval = snif_handle->netw_ref.send_packet(packet);
         if (rval == false) {
             ESP_LOGE(tag,
@@ -94,7 +98,7 @@ Sniffer::sender_task(void* pvParameters)
             continue;
         }
         snif_handle->blink(10);
-        ESP_LOGV(tag, "(sender_task) sent packet %s", packet.str().c_str());
+        ESP_LOGD(tag, "(sender_task) sent packet %s", packet.str().c_str());
     }
 }
 
